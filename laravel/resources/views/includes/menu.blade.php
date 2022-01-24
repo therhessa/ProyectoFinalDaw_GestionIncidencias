@@ -9,7 +9,16 @@
                 </a>
                 <a href="#" class="list-group-item list-group-item-action">Incidencias</a>
                 <a href="#" class="list-group-item list-group-item-action">Informar incidencias</a>
-                <a href="#" class="list-group-item list-group-item-action">Administracion</a>
+				<li role="presentation" class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+						Administración <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="/usuarios">Usuarios</a></li>
+						<li><a href="/proyectos">Proyectos</a></li>
+						<li><a href="/config">Configuración</a></li>
+					</ul>
+				</li>
 
             @else
                 <a href="#" class="list-group-item list-group-item-action">Bienvenido</a>
