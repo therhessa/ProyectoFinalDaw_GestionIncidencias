@@ -4,7 +4,7 @@
     <div class="panel-body">
         <div class="list-group">
             @if(@auth() ->check())
-                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                <a href="/home" class="list-group-item list-group-item-action active" aria-current="true">
                 panel de control
                 </a>
                 <a href="#" class="list-group-item list-group-item-action">Incidencias</a>
