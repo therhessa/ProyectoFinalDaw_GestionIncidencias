@@ -25,7 +25,7 @@
             @else
                 <a href="#" class="list-group-item list-group-item-action">Bienvenido</a>
                 <a href="#" class="list-group-item list-group-item-action">instrucciones</a>
-                <a href="#" class="list-group-item list-group-item-action">creditos</a>
+                <a href="#" class="list-group-item list-group-item-action">informacion</a>
             @endif
 
           </div>
