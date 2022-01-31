@@ -9,6 +9,7 @@
                 </a>
                 <a href="#" class="list-group-item list-group-item-action">Incidencias</a>
                 <a href="/registrar" class="list-group-item list-group-item-action">Informar incidencias</a>
+                @if(@auth() ->user()-> role=="Admin")
 				<li role="presentation" class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 						Administración <span class="caret"></span>
@@ -19,6 +20,7 @@
 						<li><a href="/config">Configuración</a></li>
 					</ul>
 				</li>
+                @endif
 
             @else
                 <a href="#" class="list-group-item list-group-item-action">Bienvenido</a>
