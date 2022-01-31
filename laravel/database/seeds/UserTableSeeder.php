@@ -17,7 +17,7 @@ class UserTableSeeder extends Seeder
             'name'=> 'tere',
             'email'=> 'admin@admin.com',
             'password'=> bcrypt('12345678'),
-            'role' => 0
+            'role' => "Admin"
 
         ]);
          //Tecnico de soporte
@@ -25,7 +25,7 @@ class UserTableSeeder extends Seeder
             'name'=> 'Rocio',
             'email'=> 'tecnico@tecnico.com',
             'password'=> bcrypt('87654321'),
-            'role' => 1
+            'role' => "Tecnico"
 
         ]);
          // Cliente
@@ -33,7 +33,7 @@ class UserTableSeeder extends Seeder
         	'name' => 'Juan',
         	'email' => 'juan@cliente.com',
         	'password' => bcrypt('11111111'),
-        	'role' => 2
+        	'role' => "Cliente"
         ]);
     }
 }

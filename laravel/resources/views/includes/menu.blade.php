@@ -8,7 +8,7 @@
                 panel de control
                 </a>
                 <a href="#" class="list-group-item list-group-item-action">Incidencias</a>
-                <a href="#" class="list-group-item list-group-item-action">Informar incidencias</a>
+                <a href="/registrar" class="list-group-item list-group-item-action">Informar incidencias</a>
 				<li role="presentation" class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 						Administración <span class="caret"></span>

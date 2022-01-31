@@ -18,7 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/registrar','HomeController@registrar');
+Route::get('/registrar','HomeController@getregistrar');
+Route::post('/registrar','HomeController@postregistrar');
 
 Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function (){
     Route::get('/usuarios', 'UserController@index');
