@@ -40,6 +40,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                        <div class="navbar-form">
+                            <div class="form-group">
+                                <select name="" class="form-control">
+                                    <option value="">Proyecto1 </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
 
                     </ul>
 

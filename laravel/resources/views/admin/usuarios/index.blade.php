@@ -51,16 +51,20 @@
             </thead>
             <tbody>
 
+                @foreach ($users as $user)
                 <tr>
-                    <td>proyecto1</td>
-                    <td>soporte telefonico</td>
+                    <td>{{ $user->email }}</td>
+                    <td>{{ $user->name }}</td>
                     <td>
-                        <a href="" class="btn btn-primary">Editar</a>
-                        <a href="" class="btn btn-danger">Dar de baja</a>
-
-
+                        <a href="/usuario/{{ $user->id }}" class="btn btn-sm btn-primary" title="Editar">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                        <a href="/usuario/{{ $user->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </a>
                     </td>
                 </tr>
+                @endforeach
 
             </tbody>
         </table>
