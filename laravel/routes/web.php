@@ -23,5 +23,13 @@ Route::post('/registrar','HomeController@postregistrar');
 
 Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function (){
     Route::get('/usuarios', 'UserController@index');
+    Route::post('/usuarios','UserController@store');
+    Route::get('/usuarios/{id}', 'UserController@edit');
+    Route::post('/usuarios/{id}', 'UserController@update');
+
+
+
+
+
 });
 
