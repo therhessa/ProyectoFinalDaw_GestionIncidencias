@@ -17,6 +17,7 @@ class CreateProyectosTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('description');
+            $table->date('start')->nullable();
             $table->timestamps();
         });
     }
