@@ -30,9 +30,9 @@ class UserController extends Controller
 
 
 
-        dd($request->all());
+       // dd($request->all());
 
-        return back()->with('notificacion','usuario registrado');
+        return back()->with('notification','usuario registrado');
 
     }
     public function edit($id){
@@ -55,8 +55,16 @@ class UserController extends Controller
         $user->save();
 
 
-        return back()->with('notificacion','usuario actualizado');
+        return back()->with('notification','usuario actualizado');
 
+
+    }
+    public function delete($id){
+        $user= App\User::find($id);
+        $user->delete();
+        return back()->with('notification','usuario eliminado');
+
+        
 
     }
 
