@@ -45,15 +45,15 @@
             <input type="hidden" name="user_id" value="{{ $user->id }}">
             <div class="row">
                 <div class="col-md-4">
-                    <select name="project_id" class="form-control" id="select-project">
+                    <select name="proyecto_id" class="form-control" id="select-project">
                         <option value="">Seleccione proyecto</option>
-                        {{-- @foreach ($proyectos as $proyecto)
+                         @foreach ($proyectos as $proyecto)
                             <option value="{{ $proyecto->id }}">{{ $proyecto->name }}</option>
-                        @endforeach --}}
+                        @endforeach 
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <select name="level_id" class="form-control" id="select-level">
+                    <select name="soporte_id" class="form-control" id="select-level">
                         <option value="">Seleccione soporte</option>
                     </select>
                 </div>
@@ -73,17 +73,17 @@
                 </tr>
             </thead>
             <tbody>
-                {{-- @foreach ($proyectos_user as $proyecto_user)
+                 @foreach ($proyectos_user as $proyecto_user)
                 <tr>
-                    <td>{{ $project_user->project->name }}</td>
-                    <td>{{ $project_user->level->name }}</td>
+                    <td>{{ $proyecto_user->proyecto->name }}</td>
+                    <td>{{ $proyecto_user->soporte->name }}</td>
                     <td>
-                        <a href="/proyecto-usuario/{{ $project_user->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
+                        <a href="/proyecto-usuario/{{ $proyecto_user->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
                             <span class="glyphicon glyphicon-remove"></span>
                         </a>
                     </td>
                 </tr>
-                @endforeach --}}
+                @endforeach 
             </tbody>
         </table>
     </div>

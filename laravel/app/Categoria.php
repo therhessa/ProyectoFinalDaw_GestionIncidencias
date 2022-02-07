@@ -10,4 +10,10 @@ class Categoria extends Model
         'name'
 
     ];
+//uno a muchos
+//para cada proyecto hay varias categorias
+    public function proyecto()
+    {
+    	return $this->belongsTo('App\Proyecto');
+    }
 }

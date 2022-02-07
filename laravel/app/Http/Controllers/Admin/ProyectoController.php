@@ -31,7 +31,9 @@ class ProyectoController extends Controller
     }
     public function edit($id){
         $proyecto= App\Proyecto::find($id);
-        return view('admin.proyectos.edit')-> with(compact('proyecto'));
+        $categorias = $proyecto->categorias;
+        $soportes = $proyecto->soportes; // Soporte::where('project_id', $id)->get();
+        return view('admin.proyectos.edit')-> with(compact('proyecto','categorias','soportes'));
 
     }
     public function update($id, Request $request){

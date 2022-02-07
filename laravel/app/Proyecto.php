@@ -12,5 +12,16 @@ class Proyecto extends Model
         'name', 'description','start'
 
     ];
+
+    //Relaciones
+    public function categorias()
+    {
+        return $this->hasMany('App\Categoria');
+    }
+    //un proyecto tiene varios tipos de soporte
+    public function soportes()
+    {
+        return $this->hasMany('App\Soporte');
+    }
   
 }

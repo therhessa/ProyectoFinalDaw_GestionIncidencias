@@ -10,4 +10,10 @@ class Soporte extends Model
         'name'
 
     ];
+
+    //relaciones
+    public function proyecto()
+    {
+        return $this->belongsTo('App\Proyecto');
+    }
 }
