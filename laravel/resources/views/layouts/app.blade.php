@@ -105,6 +105,7 @@
 
 
             </div>
+            @yield('scripts')
 
         </main>
     </div>

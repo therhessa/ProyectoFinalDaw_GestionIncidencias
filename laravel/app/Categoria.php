@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Categoria extends Model
 {
     protected $fillable=[
-        'name'
+        'name','proyecto_id'
 
     ];
 //uno a muchos
