@@ -58,12 +58,19 @@
                     <td>{{ $proyecto->description }}</td>
                     <td>{{ $proyecto->start ? : 'no hay fecha' }}</td>
                     <td>
+                        @if ($proyecto->trashed())
+                        <a href="/proyecto/{{ $proyecto->id }}/restaurar" class="btn btn-sm btn-success" title="Restaurar">
+                            <span class="glyphicon glyphicon-repeat"></span>
+                        </a>
+                        @else
                         <a href="/proyecto/{{ $proyecto->id }}" class="btn btn-sm btn-primary" title="Editar">
                             <span class="glyphicon glyphicon-pencil"></span>
                         </a>
                         <a href="/proyecto/{{ $proyecto->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
                             <span class="glyphicon glyphicon-remove"></span>
                         </a>
+                        @endif
+
                     </td>
                 </tr>
                 @endforeach
