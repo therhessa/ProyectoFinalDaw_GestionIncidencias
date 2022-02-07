@@ -38,6 +38,10 @@ Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function (){
     Route::get('/proyecto/{id}/eliminar', 'proyectoController@delete');
     Route::get('/proyecto/{id}/restaurar', 'proyectoController@restore');
 
+    //categoria
+    Route::post('/categorias','CategoriaController@store');
+
+
 
 
 
