@@ -75,8 +75,8 @@
             <tbody>
                 @foreach ($proyectos_user as $proyecto_user)
                 <tr>
-                    <td>{{ $proyecto_user->project->name }}</td>
-                    <td>{{ $proyecto_user->level->name }}</td>
+                    <td>{{ $proyecto_user->proyecto->name }}</td>
+                    <td>{{ $proyecto_user->soporte->name }}</td>
                     <td>
                         <a href="/proyecto-usuario/{{ $proyecto_user->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
                             <span class="glyphicon glyphicon-remove"></span>

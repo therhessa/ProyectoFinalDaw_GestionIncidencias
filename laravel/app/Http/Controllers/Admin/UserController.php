@@ -41,7 +41,7 @@ class UserController extends Controller
 
         $proyectos_user = App\ProyectoUser::where('user_id', $user->id)->get();
 
-        return view('admin.usuarios.edit')-> with(compact('user','proyectos'));
+        return view('admin.usuarios.edit')-> with(compact('user','proyectos','proyectos_user'));
 
     }
     public function update($id, Request $request){
