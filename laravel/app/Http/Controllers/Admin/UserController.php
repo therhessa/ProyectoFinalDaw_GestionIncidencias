@@ -39,7 +39,7 @@ class UserController extends Controller
         $user= App\User::find($id);
         $proyectos = App\Proyecto::all();
 
-        //$proyectos_user = App\ProyectoU::where('user_id', $user->id)->get();
+        $proyectos_user = App\ProyectoUser::where('user_id', $user->id)->get();
 
         return view('admin.usuarios.edit')-> with(compact('user','proyectos'));
 
