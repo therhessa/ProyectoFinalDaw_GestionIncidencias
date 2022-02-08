@@ -19,6 +19,7 @@ class CreateCategoriasTable extends Migration
             //$table->string('description');
             $table->bigInteger('proyecto_id')->unsigned();
             $table->foreign('proyecto_id')->references('id')->on('proyectos');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

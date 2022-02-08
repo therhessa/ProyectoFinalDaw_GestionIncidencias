@@ -48,7 +48,7 @@
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Ingrese nombre" class="form-control">
                     </div>
-                    <button class="btn btn-primary">Añadir</button>                    
+                    <button class="btn btn-primary">Añadir</button>
                 </form>
                 <table class="table table-bordered">
                     <thead>
@@ -75,14 +75,14 @@
                 </table>
             </div>
             <div class="col-md-6">
-                <p>Niveles</p>
+                <p>Soporte</p>
                 <form action="/soportes" method="POST" class="form-inline">
                     {{ csrf_field() }}
                     <input type="hidden" name="proyecto_id" value="{{ $proyecto->id }}">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Ingrese nombre" class="form-control">
                     </div>
-                    <button class="btn btn-primary">Añadir</button>                    
+                    <button class="btn btn-primary">Añadir</button>
                 </form>
                 <table class="table table-bordered">
                     <thead>
@@ -101,7 +101,7 @@
                                 <button type="button" class="btn btn-sm btn-primary" title="Editar" data-soporte="{{ $soporte->id }}">
                                     <span class="glyphicon glyphicon-pencil"></span>
                                 </button>
-                                <a href="/nivel/{{ $soporte->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
+                                <a href="/soporte/{{ $soporte->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
                                     <span class="glyphicon glyphicon-remove"></span>
                                 </a>
                             </td>
@@ -109,12 +109,61 @@
                         @endforeach
                     </tbody>
                 </table>
-       
+
     </div>
 </div>
 
+<div class="modal fade" tabindex="-1" role="dialog" id="modalEditCategoria">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Editar categoría</h4>
+        </div>
+        <form action="/categoria/editar" method="POST">
+            {{ csrf_field() }}
+            <div class="modal-body">
+              <input type="hidden" name="categoria_id" id="categoria_id" value="">
+              <div class="form-group">
+                  <label for="name">Nombre de la categoría</label>
+                  <input type="text" class="form-control" name="name" id="categoria_name" value="">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            </div>
+        </form>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
 
+  <div class="modal fade" tabindex="-1" role="dialog" id="modalEditSoporte">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Editar soporte</h4>
+        </div>
+        <form action="/soporte/editar" method="POST">
+            {{ csrf_field() }}
+            <div class="modal-body">
+              <input type="hidden" name="soporte_id" id="soporte_id" value="">
+              <div class="form-group">
+                  <label for="name">Nombre del nivel</label>
+                  <input type="text" class="form-control" name="name" id="soporte_name" value="">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            </div>
+        </form>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+@endsection
 
-
-
+@section('scripts')
+    <script src="/js/admin/proyectos/edit.js"></script>
 @endsection

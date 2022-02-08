@@ -28,7 +28,6 @@ class CategoriaController extends Controller
         ]);
 
         $categoria_id = $request->input('categoria_id');
-        
         $categoria = App\Categoria::find($categoria_id);
         $categoria->name = $request->input('name');
         $categoria->save();

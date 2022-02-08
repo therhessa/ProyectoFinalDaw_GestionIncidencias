@@ -7,7 +7,12 @@ use App\Http\Controllers\Controller;
 
 
 class SoporteController extends Controller
+
 {
+    public function AsignarProyecto($id)
+    {
+        return App\Soporte::where('proyecto_id', $id)->get();
+    }
     public function store(Request $request)
     {
         $request->validate( [

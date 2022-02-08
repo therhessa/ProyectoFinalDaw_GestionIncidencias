@@ -18,6 +18,7 @@ class CreateSoportesTable extends Migration
             $table->bigInteger('proyecto_id')->unsigned();
             $table->string('name');
             $table->foreign('proyecto_id')->references('id')->on('proyectos');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

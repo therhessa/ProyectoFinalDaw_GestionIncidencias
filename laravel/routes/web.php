@@ -41,10 +41,12 @@ Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function (){
     //categoria
     Route::post('/categorias','CategoriaController@store');
     Route::post('/categoria/editar', 'CategoriaController@update');
+    Route::get('/categoria/{id}/eliminar', 'CategoriaController@delete');
 
     //soporte
     Route::post('/soportes','SoporteController@store');
     Route::post('/soporte/editar', 'SoporteController@update');
+    Route::get('/soporte/{id}/eliminar', 'SoporteController@delete');
 
 
 

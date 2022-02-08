@@ -45,7 +45,7 @@
             <input type="hidden" name="user_id" value="{{ $user->id }}">
             <div class="row">
                 <div class="col-md-4">
-                    <select name="proyecto_id" class="form-control" id="select-project">
+                    <select name="proyecto_id" class="form-control" id="select-proyecto">
                         <option value="">Seleccione proyecto</option>
                          @foreach ($proyectos as $proyecto)
                             <option value="{{ $proyecto->id }}">{{ $proyecto->name }}</option>
@@ -53,7 +53,7 @@
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <select name="soporte_id" class="form-control" id="select-level">
+                    <select name="soporte_id" class="form-control" id="select-soporte">
                         <option value="">Seleccione soporte</option>
                     </select>
                 </div>
@@ -72,7 +72,7 @@
                     <th>Opciones</th>
                 </tr>
             </thead>
-            <tbody>
+            {{-- <tbody>
                  @foreach ($proyectos_user as $proyecto_user)
                 <tr>
                     <td>{{ $proyecto_user->proyecto->name }}</td>
@@ -84,8 +84,14 @@
                     </td>
                 </tr>
                 @endforeach 
-            </tbody>
+            </tbody> --}}
         </table>
     </div>
 </div>
 @endsection
+
+
+@section('scripts')
+    <script src="/js/admin/usuarios/edit.js"></script>
+@endsection
+
