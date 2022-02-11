@@ -36,6 +36,8 @@ class ProyectoUserController extends Controller
     public function delete($id)
     {
     	App\ProyectoUser::find($id)->delete();
+       
+
     	return back();
     }
 }

@@ -19,8 +19,11 @@ class CreateProyectoUserTable extends Migration
             $table->foreign('proyecto_id')->references('id')->on('proyectos');
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
+            //$table->bigInteger('seleccionar_proyecto_id')->unsigned()->nullable();
+           // $table->foreign('seleccionar_proyecto_id')->references('id')->on('proyectos');
             $table->bigInteger('soporte_id')->unsigned();
             $table->foreign('soporte_id')->references('id')->on('soportes');
+            //$table->rememberToken();
             $table->timestamps();
         });
     }

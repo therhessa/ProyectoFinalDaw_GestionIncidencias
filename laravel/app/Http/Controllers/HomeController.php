@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
-use App\Categoria;
-use App\Incidencia;
+use App;
 
 class HomeController extends Controller
 {
@@ -26,31 +25,45 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
-    }
-    public function getregistrar(){
-        //hacemos consulta para obtener categoria del proyecto que queremos
-        $categorias= Categoria:: where('proyecto_id',1)->get();
-        return view('registrar')->with((compact('categorias')));
-    }
-    public function postregistrar(Request $request){
-            $this->validate($request, [
-            'categoria_id' => 'sometimes|exists:categories,id',
-            'severity' => 'required|in:M,N,A',
-            'title' => 'required|string|max:255',
-            'description' => 'required|string|max:255'
-           
-        ]);
+        $user = auth()->user();
+        $seleccionar_proyecto_id = $user->seleccionar_proyecto_id;
+
+        if ($seleccionar_proyecto_id) {
+
+            if(auth()->user()-> role=="Tecnico") {
+                $mis_incidencias = App\Incidencia::where('proyecto_id', $seleccionar_proyecto_id)->where('tecnico_id', $user->id)->get();
+
+                $proyectouser = App\ProyectoUser::where('proyecto_id', $seleccionar_proyecto_id)->where('user_id', $user->id)->first();
+
+                if ($proyectouser) {
+                    $incidenciasnoresueltas = App\Incidencia::where('tecnico_id', null)->where('soporte_id', $proyectouser->level_id)->get();
+                } else {
+                    $incidenciasnoresueltas = collect(); // empty when no project associated
+                }
+            }
+
+              $incidents_by_me = App\Incidencia::where('cliente_id', $user->id)
+                                        ->where('proyecto_id', $seleccionar_proyecto_id)->get();
+        } else {
+            $mis_incidencias = [];
+            $incidenciasnoresueltas = [];
+            $incidents_by_me = [];
+        }
+
+        return view('home')->with(compact('mis_incidencias', 'incidenciasnoresueltas','incidents_by_me'));
 
 
-        $incidencia= new Incidencia();
-        $incidencia->categoria_id=$request->input('categoria_id') ?: null;
-        $incidencia->severity=$request-> input('severity');
-        $incidencia->title=$request-> input('title');
-        $incidencia->description=$request-> input('description');
-        $incidencia->cliente_id=auth()->user()->id;
-        $incidencia->save();
-        return back();
+    }
+    public function seleccionarProyecto($id)
+    {
+         // Validar que el usuario esté asociado con el proyecto
+
+         $user = auth()->user();
+
+            $user->seleccionar_proyecto_id=$id;
+            $user->save();
+            return back();
 
     }
+
 }

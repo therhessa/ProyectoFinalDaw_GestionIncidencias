@@ -31,7 +31,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Sistema gestion incidencias') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -40,16 +40,17 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <div class="navbar-form">
+                        @if(Auth()->check())
+                        <form class="navbar-form">
                             <div class="form-group">
-                                <select name="" class="form-control">
-                                    <option value="">Proyecto1 </option>
-
-                                </select>
-
+                              <select id="lista-proyectos" class="form-control">
+                                @foreach (auth()->user()->lista_proyectos as $proyecto)
+                                  <option value="{{ $proyecto->id }}" @if($proyecto->id==auth()->user()->selected_proyecto_id) selected @endif>{{ $proyecto->name }}</option>
+                                @endforeach
+                              </select>
                             </div>
-
-                        </div>
+                        </form>
+                        @endif
 
                     </ul>
 
@@ -109,6 +110,7 @@
 
         </main>
     </div>
+    <script src="/js/app1.js"></script>
     @yield('scripts')
 </body>
 </html>

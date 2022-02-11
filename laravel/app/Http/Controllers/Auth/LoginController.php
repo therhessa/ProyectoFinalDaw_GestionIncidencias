@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+use App;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -36,4 +37,31 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+
+
+     protected function authenticated()
+     {
+          $user = auth()->user();
+
+         if(! $user->seleccionar_proyecto_id)
+         {
+             if (auth()->user()-> role=="Admin" ||auth() ->user()-> role=="Cliente"  ) {
+                 $user->seleccionar_proyecto_id = App\Proyecto::first()->id;
+               
+                }
+              
+              
+                 else
+                {  //is_support y si el usuario de soporte no está asociado a ningún proyecto?
+               $primer_proyecto = $user->proyectos->first();
+
+                 if ($primer_proyecto)
+                        $user->seleccionar_proyecto_id = $primer_proyecto->id;
+
+              }
+              $user->save();
+         }
+     }
+
 }

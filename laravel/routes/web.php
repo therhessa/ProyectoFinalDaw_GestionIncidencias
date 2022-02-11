@@ -18,8 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/registrar','HomeController@getregistrar');
-Route::post('/registrar','HomeController@postregistrar');
+Route::get('seleccionar/proyecto/{id}','HomeController@seleccionarProyecto');
+Route::get('/registrar','IncidenciaController@create');
+Route::post('/registrar','IncidenciaController@store');
 
 Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function (){
 

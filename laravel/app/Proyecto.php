@@ -14,6 +14,11 @@ class Proyecto extends Model
     ];
 
     //Relaciones
+    public function users(){
+        return $this-> belongsToMany('App\User');
+
+
+    }
     public function categorias()
     {
         return $this->hasMany('App\Categoria');
@@ -23,5 +28,6 @@ class Proyecto extends Model
     {
         return $this->hasMany('App\Soporte');
     }
-  
+   
+
 }

@@ -2,6 +2,7 @@
 
 namespace App;
 
+
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -38,4 +39,21 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //Relaciones
+    public function proyectos(){
+        return $this->belongsToMany('App\Proyecto');
+    }
+
+    public function getListaProyectosAttribute(){
+        if(auth()->user()->role =="Admin")
+        {
+            return $this->proyectos;
+
+        }
+        return Proyecto::all();
+    }
+
+
+
 }
