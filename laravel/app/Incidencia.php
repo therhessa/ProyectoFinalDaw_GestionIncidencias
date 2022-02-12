@@ -29,7 +29,7 @@ class Incidencia extends Model
         return $this->belongsTo('App\User', 'tecnico_id');
     }
 
-    public function clientw()
+    public function cliente()
     {
         return $this->belongsTo('App\User', 'cliente_id');
     }

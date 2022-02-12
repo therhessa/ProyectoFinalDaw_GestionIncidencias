@@ -45,7 +45,7 @@
                             <div class="form-group">
                               <select id="lista-proyectos" class="form-control">
                                 @foreach (auth()->user()->lista_proyectos as $proyecto)
-                                  <option value="{{ $proyecto->id }}" @if($proyecto->id==auth()->user()->selected_proyecto_id) selected @endif>{{ $proyecto->name }}</option>
+                                  <option value="{{ $proyecto->id }}" @if($proyecto->id==auth()->user()->seleccionar_proyecto_id) selected @endif>{{ $proyecto->name }}</option>
                                 @endforeach
                               </select>
                             </div>

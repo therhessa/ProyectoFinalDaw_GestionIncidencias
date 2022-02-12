@@ -2,11 +2,12 @@
 @section('content')
 <div class="panel panel-primary">
     <div class="panel-heading">Dashboard</div>
+
     <div class="panel-body">
         @if (auth() ->user()-> role=="Tecnico")
         <div class="panel panel-success">
 			<div class="panel-heading">
-				<h3 class="panel-title">Incidencias asignadas</h3>
+				<h3 class="panel-title">Incidencias asignadas a mí</h3>
 			</div>
 			<div class="panel-body">
 				<table class="table table-bordered">
@@ -28,8 +29,8 @@
 										{{ $incidencia->id }}
 									</a>
 								</td>
-								<td>{{ $incidencia->categoria->name }}</td>
-								<td>{{ $incidencia->severity_full }}</td>
+								<td>{{ $incidencia->categoria  }}</td>
+								<td>{{$incidencia->severity_full }}</td>
 								<td>{{ $incidencia->state }}</td>
 								<td>{{ $incidencia->created_at }}</td>
 								<td>{{ $incidencia->description }}</td>
@@ -40,7 +41,7 @@
 			</div>
 		</div>
 
-        <div class="panel panel-success">
+		<div class="panel panel-success">
 			<div class="panel-heading">
 				<h3 class="panel-title">Incidencias sin asignar</h3>
 			</div>
@@ -57,18 +58,16 @@
 							<th>Opción</th>
 						</tr>
 					</thead>
-					<tbody id="dashboard_pendientes">
-                      
-						    @foreach ($incidenciasnoresueltas as $incidencia)
-							{{-- <tr>
-								  <td>
-									<a href="/ver/{{ $incident->id }}">
-										{{ $incident->id }}
+					<tbody id="dashboard_pending_incidents">
+						@foreach ($incidenciasnoresueltas as $incidencia)
+							<tr>
+								<td>
+									<a href="/ver/{{ $incidencia->id }}">
+										{{$incidencia->id }}
 									</a>
-								</td>  --}}
-
-								<td>{{ $incidencia->categoria->name }}</td>
-								<td>{{ $incidencia->severity_full }}</td>
+								</td>
+								<td>{{ $incidencia->categoria }}</td>
+								<td>{{$incidencia->severity_full }}</td>
 								<td>{{ $incidencia->state }}</td>
 								<td>{{ $incidencia->created_at }}</td>
 								<td>{{ $incidencia->description }}</td>
@@ -78,17 +77,16 @@
 									</a>
 								</td>
 							</tr>
-						@endforeach   
-                         
+						@endforeach
 					</tbody>
 				</table>
 			</div>
 		</div>
 		@endif
-       </div> 
+
 		<div class="panel panel-success">
 			<div class="panel-heading">
-				<h3 class="panel-title">Incidencias realizadas cliente</h3>
+				<h3 class="panel-title">Incidencias reportadas por mí</h3>
 			</div>
 			<div class="panel-body">
 				<table class="table table-bordered">
@@ -100,79 +98,33 @@
 							<th>Estado</th>
 							<th>Fecha creación</th>
 							<th>Título</th>
-						
+							<th>Responsable</th>
 						</tr>
 					</thead>
 					<tbody id="dashboard_by_me">
-						 @foreach ($incidents_by_me as $incidencia)
+						@foreach ($incidents_by_me as $incidencia)
 							<tr>
-                                <td>{{$incidencia->id}}</td>
-                                <td>{{$incidencia->categoria->name}}</td>
-                                <td>{{$incidencia->severity_full}}</td>
-                                <td>{{$incidencia->id}}</td>
-                                <td>{{$incidencia->created_at}}</td>
-                                <td>{{$incidencia->description}}</td>
-
-								 {{-- <td>
+								<td>
 									<a href="/ver/{{ $incidencia->id }}">
 										{{ $incidencia->id }}
 									</a>
-								</td> --}}
-								<td>{{ $incidencia->categoria_name }}</td>
-								<td>{{ $incidencia->severity_full }}</td>
+								</td>
+								<td>{{$incidencia->categoria  }}</td>
+								<td>{{$incidencia->severity_full }}</td>
 								<td>{{ $incidencia->state }}</td>
-								<td>{{ $incidencia->created_at }}</td>
-								<td>{{ $incidencia->title_short }}</td>
-								<td>
-									{{ $incidencia->soporte_id ? $incidencia->soporte->name : 'Sin asignar' }}
-								</td> 
+								<td>{{$incidencia->created_at }}</td>
+								<td>{{$incidencia->description }}</td>
+								{{-- <td>
+									{{ $incidencia->tecnico_id ? $incident->support->name : 'Sin asignar' }}
+								</td> --}}
 							</tr>
-						@endforeach 
+						@endforeach
 					</tbody>
 				</table>
-			
+			</div>
+          
 		</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p>hola</p>
-
-  
-           
-       
-   
-
+</div>
 @endsection

@@ -46,7 +46,7 @@ class User extends Authenticatable
     }
 
     public function getListaProyectosAttribute(){
-        if(auth()->user()->role =="Admin")
+        if(auth()->user()->role =="Tecnico")
         {
             return $this->proyectos;
 

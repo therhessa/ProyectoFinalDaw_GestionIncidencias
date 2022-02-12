@@ -28,6 +28,12 @@ class Proyecto extends Model
     {
         return $this->hasMany('App\Soporte');
     }
+
+    //accessors
+    public function getFirstSoporteIdAttribute(){
+       return  $this->soportes->first()->id;
+
+    }
    
 
 }

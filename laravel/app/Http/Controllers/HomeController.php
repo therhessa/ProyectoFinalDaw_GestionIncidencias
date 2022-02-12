@@ -27,10 +27,10 @@ class HomeController extends Controller
     {
         $user = auth()->user();
         $seleccionar_proyecto_id = $user->seleccionar_proyecto_id;
+        
+       //if ($seleccionar_proyecto_id) {
 
-        if ($seleccionar_proyecto_id) {
-
-            if(auth()->user()-> role=="Tecnico") {
+            //if(auth()->user()-> role=="Tecnico") {
                 $mis_incidencias = App\Incidencia::where('proyecto_id', $seleccionar_proyecto_id)->where('tecnico_id', $user->id)->get();
 
                 $proyectouser = App\ProyectoUser::where('proyecto_id', $seleccionar_proyecto_id)->where('user_id', $user->id)->first();
@@ -40,29 +40,29 @@ class HomeController extends Controller
                 } else {
                     $incidenciasnoresueltas = collect(); // empty when no project associated
                 }
-            }
-
+            //}
+            
               $incidents_by_me = App\Incidencia::where('cliente_id', $user->id)
                                         ->where('proyecto_id', $seleccionar_proyecto_id)->get();
-        } else {
-            $mis_incidencias = [];
-            $incidenciasnoresueltas = [];
-            $incidents_by_me = [];
-        }
-
+            
+        //  } else {
+        //     $mis_incidencias = [];
+        //     $incidenciasnoresueltas = [];
+        //     $incidents_by_me = [];
+        //  }
+       
         return view('home')->with(compact('mis_incidencias', 'incidenciasnoresueltas','incidents_by_me'));
 
 
     }
     public function seleccionarProyecto($id)
     {
-         // Validar que el usuario esté asociado con el proyecto
+         
 
-         $user = auth()->user();
-
-            $user->seleccionar_proyecto_id=$id;
-            $user->save();
-            return back();
+        $user = auth()->user();
+        $user->seleccionar_proyecto_id=$id;
+        $user->save();
+        return back();
 
     }
 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App;
-use App\Incidencia;
+
 
 class IncidenciaController extends Controller
 {
@@ -29,12 +29,17 @@ class IncidenciaController extends Controller
         ]);
 
 
-        $incidencia= new Incidencia();
+        $incidencia= new App\Incidencia();
         $incidencia->categoria_id=$request->input('categoria_id') ?: null;
         $incidencia->severity=$request-> input('severity');
         $incidencia->title=$request-> input('title');
         $incidencia->description=$request-> input('description');
-        $incidencia->cliente_id=auth()->user()->id;
+        $user=auth()->user();
+        $incidencia->cliente_id=$user->id;
+        $incidencia->proyecto_id=$user->seleccionar_proyecto_id;
+        $incidencia->soporte_id= App\Proyecto::find($user->seleccionar_proyecto_id)->first_soporte_id;
+        
+        //dd($incidencia);
         $incidencia->save();
         return back();
 

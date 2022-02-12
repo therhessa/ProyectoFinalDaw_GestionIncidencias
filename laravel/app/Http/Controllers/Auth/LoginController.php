@@ -53,11 +53,11 @@ class LoginController extends Controller
               
               
                  else
-                {  //is_support y si el usuario de soporte no está asociado a ningún proyecto?
+                {  // si el usuario de soporte no está asociado a ningún proyecto?
                $primer_proyecto = $user->proyectos->first();
 
                  if ($primer_proyecto)
-                        $user->seleccionar_proyecto_id = $primer_proyecto->id;
+                        ($user->seleccionar_proyecto_id = $primer_proyecto->id);
 
               }
               $user->save();
