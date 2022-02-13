@@ -18,6 +18,7 @@ class CreateIncidenciasTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->string('severity', 1);
+            $table->boolean('active')->default(1);
 
             
            $table->bigInteger('proyecto_id')->unsigned()->nullable();

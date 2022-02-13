@@ -47,5 +47,29 @@ class Incidencia extends Model
     			return 'Alta';
     	}
     }
+    public function getCategoriaNameAttribute()
+    {
+        if ($this->categoria)
+            return $this->categoria->name;
+
+        return 'General';
+    }
+    public function getTecnicoNameAttribute()
+    {
+        if ($this->tecnico)
+            return $this->tecnico->name;
+
+        return 'Sin asignar';
+    }
+    public function getStateAttribute()
+    {
+        if ($this->active == 0)
+            return 'Resuelto';
+
+        if ($this->tecnico_id)
+            return 'Asignado';
+
+        return 'Pendiente';
+    }
 
 }

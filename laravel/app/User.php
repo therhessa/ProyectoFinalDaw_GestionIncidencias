@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -43,6 +43,12 @@ class User extends Authenticatable
     //Relaciones
     public function proyectos(){
         return $this->belongsToMany('App\Proyecto');
+    }
+    public function resolveAttend(Incidencia $incidencia)
+    {
+        return App\ProyectoUser::where('user_id', $this->id)
+                        ->where('soporte_id', $incidencia->soporte_id)
+                        ->first();
     }
 
     public function getListaProyectosAttribute(){

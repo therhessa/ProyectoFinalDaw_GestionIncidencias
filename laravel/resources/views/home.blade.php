@@ -4,7 +4,7 @@
     <div class="panel-heading">Dashboard</div>
 
     <div class="panel-body">
-        @if (auth() ->user()-> role=="Tecnico")
+          @if (auth() ->user()-> role=="Tecnico")
         <div class="panel panel-success">
 			<div class="panel-heading">
 				<h3 class="panel-title">Incidencias asignadas a mí</h3>
@@ -29,12 +29,20 @@
 										{{ $incidencia->id }}
 									</a>
 								</td>
-								<td>{{ $incidencia->categoria  }}</td>
+								<td>{{ $incidencia->categoria_name  }}</td>
 								<td>{{$incidencia->severity_full }}</td>
 								<td>{{ $incidencia->state }}</td>
 								<td>{{ $incidencia->created_at }}</td>
 								<td>{{ $incidencia->description }}</td>
+                                <td>
+									<a href="/ver/{{ $incidencia->id }}"
+										{{ $incidencia->id }} class="btn btn-primary btn-sm">
+										Atender
+									</a>
+								</td>
+
 							</tr>
+
 						@endforeach
 					</tbody>
 				</table>
@@ -60,19 +68,22 @@
 					</thead>
 					<tbody id="dashboard_pending_incidents">
 						@foreach ($incidenciasnoresueltas as $incidencia)
+                        
 							<tr>
 								<td>
 									<a href="/ver/{{ $incidencia->id }}">
 										{{$incidencia->id }}
 									</a>
 								</td>
-								<td>{{ $incidencia->categoria }}</td>
+                             
+								<td>{{ $incidencia->categoria_name }}</td>
 								<td>{{$incidencia->severity_full }}</td>
 								<td>{{ $incidencia->state }}</td>
 								<td>{{ $incidencia->created_at }}</td>
 								<td>{{ $incidencia->description }}</td>
 								<td>
-									<a href="" class="btn btn-primary btn-sm">
+									<a href="/ver/{{ $incidencia->id }}"
+										{{ $incidencia->id }} class="btn btn-primary btn-sm">
 										Atender
 									</a>
 								</td>
@@ -109,20 +120,20 @@
 										{{ $incidencia->id }}
 									</a>
 								</td>
-								<td>{{$incidencia->categoria  }}</td>
+								<td>{{$incidencia->categoria_name  }}</td>
 								<td>{{$incidencia->severity_full }}</td>
 								<td>{{ $incidencia->state }}</td>
 								<td>{{$incidencia->created_at }}</td>
 								<td>{{$incidencia->description }}</td>
-								{{-- <td>
-									{{ $incidencia->tecnico_id ? $incident->support->name : 'Sin asignar' }}
-								</td> --}}
+								 <td>
+									{{ $incidencia->tecnico_id ? $incidencia->tecnico->name : 'Sin asignar' }}
+								</td>
 							</tr>
 						@endforeach
 					</tbody>
 				</table>
 			</div>
-          
+
 		</div>
 
     </div>

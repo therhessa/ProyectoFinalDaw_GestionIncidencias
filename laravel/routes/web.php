@@ -19,8 +19,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('seleccionar/proyecto/{id}','HomeController@seleccionarProyecto');
+//incidencias
 Route::get('/registrar','IncidenciaController@create');
 Route::post('/registrar','IncidenciaController@store');
+Route::get('/ver/{id}','IncidenciaController@show');
+Route::get('/incidencia/{id}/atender', 'IncidenciaController@attend');
+Route::get('/incidencia/{id}/resolver', 'IncidenciaController@solve');
+Route::get('/incidencia/{id}/abrir', 'IncidenciaController@open');
+Route::get('/incidencia/{id}/derivar', 'IncidenciaController@nextsoporte');
+Route::get('/incidencia/{id}/editar', 'IncidenciaController@edit');
+Route::post('/incidencia/{id}/editar', 'IncidenciaController@update');
 
 Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function (){
 

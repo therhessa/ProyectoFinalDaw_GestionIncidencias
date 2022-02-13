@@ -7,7 +7,7 @@
                 <a  href="{{ route('home') }}" class="list-group-item list-group-item-action active" aria-current="true">
                 panel de control
                 </a>
-                <a href="#" class="list-group-item list-group-item-action">Incidencias</a>
+                <a href="/ver" class="list-group-item list-group-item-action">Incidencias</a>
                 <a href="/registrar" class="list-group-item list-group-item-action">Informar incidencias</a>
                 @if(@auth() ->user()-> role=="Admin")
 				<li role="presentation" class="dropdown">

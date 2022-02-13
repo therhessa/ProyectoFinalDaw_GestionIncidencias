@@ -20,14 +20,7 @@ class UserTableSeeder extends Seeder
             'role' => "Admin"
 
         ]);
-         //Tecnico de soporte
-         User::create ([
-            'name'=> 'Rocio',
-            'email'=> 'tecnico@tecnico.com',
-            'password'=> bcrypt('87654321'),
-            'role' => "Tecnico"
-
-        ]);
+        
         User::create ([
             'name'=> 'Maria',
             'email'=> 'tecnic2@tecnico.com',
