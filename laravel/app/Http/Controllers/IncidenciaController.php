@@ -115,7 +115,7 @@ class IncidenciaController extends Controller
         $next_soporte_id = $this->getNextSoporteId($soporte_id, $soportes);
 
         if ($next_soporte_id) {
-            $incidencia->level_id = $next_soporte_id;
+            $incidencia->soporte_id = $next_soporte_id;
             $incidencia->support_id = null;
             $incidencia->save();
             return back();
@@ -140,7 +140,7 @@ class IncidenciaController extends Controller
         if ($position == -1)
             return null;
 
-     
+
 
         return $soportes[$position+1]->id;
     }
@@ -154,7 +154,7 @@ class IncidenciaController extends Controller
 
     public function update(Request $request, $id)
     {
-      
+
 
         $incidencia = App\Incidencia::findOrFail($id);
 
@@ -164,7 +164,7 @@ class IncidenciaController extends Controller
         $incidencia->description = $request->input('description');
 
         $incidencia->save();
-        return redirect("/ver/$id");        
+        return redirect("/ver/$id");
     }
 
 
