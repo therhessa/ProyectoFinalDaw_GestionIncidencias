@@ -4,12 +4,11 @@
     <div class="panel-body">
         <div class="list-group">
             @if(@auth() ->check())
-            <b-list-group>
-                <b-list-group-item  href="{{ route('home') }}" variant="primary">Panel de Control
-                </b-list-group-item>
-                <b-list-group-item href="/registrar"  variant="primary">Informar incidencias</b-list-group-item>
-  
-            </b-list-group>
+            <a  href="{{ route('home') }}" class="list-group-item list-group-item-action active" aria-current="true">
+                panel de control
+                </a>
+                <a href="/ver" class="list-group-item list-group-item-action">Incidencias</a>
+                <a href="/registrar" class="list-group-item list-group-item-action">Informar incidencias</a>
             
                 @if(@auth() ->user()-> role=="Admin")
                 <lista2-component></lista2-component>
