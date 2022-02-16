@@ -1,31 +1,30 @@
 
 <div class="panel panel-primary">
-    <div class="panel-heading"> Menu</div>
+   
     <div class="panel-body">
         <div class="list-group">
             @if(@auth() ->check())
-                <a  href="{{ route('home') }}" class="list-group-item list-group-item-action active" aria-current="true">
-                panel de control
-                </a>
-                <a href="/ver" class="list-group-item list-group-item-action">Incidencias</a>
-                <a href="/registrar" class="list-group-item list-group-item-action">Informar incidencias</a>
+            <b-list-group>
+                <b-list-group-item  href="{{ route('home') }}" variant="primary">Panel de Control
+                </b-list-group-item>
+                <b-list-group-item href="/registrar"  variant="primary">Informar incidencias</b-list-group-item>
+  
+            </b-list-group>
+            
                 @if(@auth() ->user()-> role=="Admin")
-				<li role="presentation" class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-						Administración <span class="caret"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="/usuarios">Usuarios</a></li>
-						<li><a href="/proyectos">Proyectos</a></li>
-						<li><a href="/config">Configuración</a></li>
-					</ul>
-				</li>
+                <lista2-component></lista2-component>
+				
                 @endif
 
             @else
-                <a href="#" class="list-group-item list-group-item-action">Bienvenido</a>
+            <div id="app">
+                <lista-component></lista-component>
+
+
+            </div>
+                {{-- <a href="#" class="list-group-item list-group-item-action">Bienvenido</a>
                 <a href="#" class="list-group-item list-group-item-action">instrucciones</a>
-                <a href="#" class="list-group-item list-group-item-action">informacion</a>
+                <a href="#" class="list-group-item list-group-item-action">informacion</a> --}}
             @endif
 
           </div>

@@ -36,7 +36,7 @@ class HomeController extends Controller
                 $proyectouser = App\ProyectoUser::where('proyecto_id', $seleccionar_proyecto_id)->where('user_id', $user->id)->first();
                // dd($proyectouser);
                 if ($proyectouser) {
-                    $incidenciasnoresueltas = App\Incidencia::where('tecnico_id', null)->where('soporte_id', $proyectouser->level_id)->get();
+                    $incidenciasnoresueltas = App\Incidencia::where('tecnico_id', null)->where('soporte_id', $proyectouser->soporte_id)->get();
                    
                 } else {
                     $incidenciasnoresueltas = collect(); // empty when no project associated

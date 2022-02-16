@@ -1,16 +1,23 @@
 <template>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
+       <div>
+  <b-card class="text-center">
+    <div class="bg-secondary text-light">
+      Sistema de gestión de incidencias.
+    </div>
+  </b-card>
+  <div>
+  <b-card
+    overlay
+    img-src="https://picsum.photos/id/180/900/350"
+    img-alt="Card Image"
+    text-variant="white"
 
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                </div>
-            </div>
-        </div>
+  >
+
+  </b-card>
+</div>
+</div>
     </div>
 </template>
 

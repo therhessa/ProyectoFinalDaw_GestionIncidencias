@@ -28,18 +28,21 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <b-navbar toggleable="lg" type="dark" variant="info">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <b-navbar-brand href="{{ url('/') }}">
                     {{ config('app.name', 'Sistema gestion incidencias') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                </b-navbar-brand>
+                <b-navbar-toggle target="navbar-toggle-collapse">
+                    <template #default="{ expanded }">
+                      <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
+                      <b-icon v-else icon="chevron-bar-down"></b-icon>
+                    </template>
+                  </b-navbar-toggle>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <b-collapse id="navbar-toggle-collapse" is-nav>
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+                    <b-navbar-nav class="ml-auto">
                         @if(Auth()->check())
                         <form class="navbar-form">
                             <div class="form-group">
@@ -52,43 +55,42 @@
                         </form>
                         @endif
 
-                    </ul>
+                    </b-navbar-nav>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <b-navbar-nav class="ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
+                            
+                            <b-nav-item class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</b-nav-item>
                             @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
+                               
+                                    <b-nav-item class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</b-nav-item>
+                                
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
                         @endguest
-                    </ul>
-                </div>
+                    </b-navbar-nav>
+                </b-collapse>
             </div>
-        </nav>
+        </b-navbar>
 
         <main class="py-4">
             <div class="container">
