@@ -117,7 +117,11 @@ class IncidenciaController extends Controller
 
         if ($next_soporte_id) {
             $incidencia->soporte_id = $next_soporte_id;
+<<<<<<< HEAD
             $incidencia->tecnico_id = null;
+=======
+            $incidencia->support_id = null;
+>>>>>>> 40a25adf21e685aacbc75f00160cfc867822614a
             $incidencia->save();
             return back();
         }

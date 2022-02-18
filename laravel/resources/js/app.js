@@ -4,9 +4,19 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+ require('./bootstrap');
 
 window.Vue = require('vue');
+Vue.use(require('bootstrap-vue'));
+import Vue from 'vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+
+
+// Make BootstrapVue available throughout your project
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
 
 /**
  * The following block of code may be used to automatically register your
@@ -21,6 +31,10 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('lista-component', require('./components/ListaComponent.vue').default);
+<<<<<<< HEAD
+=======
+Vue.component('lista2-component', require('./components/Lista2Component.vue').default);
+>>>>>>> 40a25adf21e685aacbc75f00160cfc867822614a
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

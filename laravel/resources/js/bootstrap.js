@@ -1,4 +1,5 @@
 window._ = require('lodash');
+// Import Bootstrap an BootstrapVue CSS files (order is important)
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
