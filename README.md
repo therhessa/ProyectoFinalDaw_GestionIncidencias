@@ -2,7 +2,7 @@
 Proyecto Final Fp DAW
 Sistema de gestión de incidencias en laravel
 
-#Despliegue aplicación
+# Despliegue aplicación
 -Requisitos tener instalado docker.
 Para iniciar la aplicación:
 -Iniciaremos nuestro archivo, ejecutando el comando: docker-compose up, para iniciar la pila de la aplicación.
