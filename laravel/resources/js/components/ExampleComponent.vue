@@ -1,17 +1,15 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
 
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="card bg-info">
+    <div class="card-body">
+        <h5 class="card-title">Sistema Gestión Incidencias</h5>
     </div>
+    <img src="https://picsum.photos/id/180/900/350" >
+</div>
+
+
+
+
 </template>
 
 <script>

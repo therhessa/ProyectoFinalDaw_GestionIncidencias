@@ -21,8 +21,8 @@ class IncidenciasTableSeeder extends Seeder
         	'proyecto_id' => 1,
         	'soporte_id' => 2,
 
-        	'cliente_id' => 2,
-        	'tecnico_id' => 2
+        	'cliente_id' => 1,
+        	'tecnico_id' => 4
     	]);
 
     }

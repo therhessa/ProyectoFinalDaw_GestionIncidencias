@@ -1,6 +1,6 @@
 
 <div class="panel panel-primary">
-    <div class="panel-heading"> Menu</div>
+
     <div class="panel-body">
         <div class="list-group">
             @if(@auth() ->check())
@@ -17,15 +17,16 @@
 					<ul class="dropdown-menu">
 						<li><a href="/usuarios">Usuarios</a></li>
 						<li><a href="/proyectos">Proyectos</a></li>
-						<li><a href="/config">Configuración</a></li>
+
 					</ul>
 				</li>
                 @endif
 
             @else
-                <a href="#" class="list-group-item list-group-item-action">Bienvenido</a>
+            <lista-component></lista-component>
+                {{-- <a href="#" class="list-group-item list-group-item-action">Bienvenido</a>
                 <a href="#" class="list-group-item list-group-item-action">instrucciones</a>
-                <a href="#" class="list-group-item list-group-item-action">informacion</a>
+                <a href="#" class="list-group-item list-group-item-action">informacion</a> --}}
             @endif
 
           </div>

@@ -27,17 +27,17 @@ class HomeController extends Controller
     {
         $user = auth()->user();
         $seleccionar_proyecto_id = $user->seleccionar_proyecto_id;
-
+        // dd( $seleccionar_proyecto_id);
        //if ($seleccionar_proyecto_id) {
 
             //if(auth()->user()->role =="Tecnico") {
                 $mis_incidencias = App\Incidencia::where('proyecto_id', $seleccionar_proyecto_id)->where('tecnico_id', $user->id)->get();
-                 //dd($mis_incidencias);
+                 ($mis_incidencias);
                 $proyectouser = App\ProyectoUser::where('proyecto_id', $seleccionar_proyecto_id)->where('user_id', $user->id)->first();
                // dd($proyectouser);
                 if ($proyectouser) {
-                    $incidenciasnoresueltas = App\Incidencia::where('tecnico_id', null)->where('soporte_id', $proyectouser->level_id)->get();
-                   
+                    $incidenciasnoresueltas = App\Incidencia::where('tecnico_id', null)->where('soporte_id', $proyectouser->soporte_id)->get();
+
                 } else {
                     $incidenciasnoresueltas = collect(); // empty when no project associated
                 }
