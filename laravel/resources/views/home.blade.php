@@ -4,8 +4,7 @@
     <div class="panel-heading">Dashboard</div>
 
     <div class="panel-body">
-        
-          @if (auth() ->user()-> role=="Tecnico"  )
+          @if (auth() ->user()-> role=="Tecnico")
         <div class="panel panel-success">
 			<div class="panel-heading">
 				<h3 class="panel-title">Incidencias asignadas a mí</h3>
