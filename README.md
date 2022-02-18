@@ -9,6 +9,11 @@ Para iniciar la aplicación:
 -Podemos comprobar si está en ejecución con el comando: docker ps.
 -Si tenemos que realizar alguna operación sobre el sistema ejecutaremos el comando: docker exec -it (nombre:proyecto_servidor_1) /bin/bash
 
-
+Base de datos de la aplicación:
+Nombre: incidencias
+Para poder acceder a ella:
+-Servidor:db
+-Usuario:admin
+-contraseña:laravel
 
 
