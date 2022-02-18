@@ -14,9 +14,9 @@ _Si tenemos que realizar alguna operación sobre el sistema ejecutaremos el coma
 
 Nombre: incidencias
 Para poder acceder a ella:
--Servidor:db
--Usuario:admin
--contraseña:laravel
+* Servidor:db
+* Usuario:admin
+* contraseña:laravel
 
 ## Construido con 🛠️
 * Laravel(back-end)
