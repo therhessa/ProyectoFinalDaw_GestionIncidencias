@@ -19,6 +19,7 @@ Para poder acceder a ella:
 -contraseña:laravel
 
 ## Construido con 🛠️
-_Laravel_
-_php_
-_Vue_
+* Laravel(back-end)
+* php(lenguaje programacion)
+* Javascript(lenguaje programacion)
+* Vue (front-end)
