@@ -17,8 +17,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('seleccionar/proyecto/{id}','HomeController@seleccionarProyecto');
+Route::get('/configuracion', 'HomeController@config')->name('config');
+Route::post('/user/update2', 'HomeController@update')->name('user.update');
+Route::get('/user/avatar/{filename}', 'HomeController@getImage')->name('user.avatar');
 //incidencias
 Route::get('/registrar','IncidenciaController@create');
 Route::post('/registrar','IncidenciaController@store');
@@ -37,7 +40,8 @@ Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function (){
     Route::post('/usuarios','UserController@store');
     Route::get('/usuario/{id}', 'UserController@edit');
     Route::post('/usuario/{id}', 'UserController@update');
-    Route::get('/usuario/{id}/eliminar', 'UserController@delete');
+    Route::get('/usuario/{id}/eliminar','UserController@delete');
+ 
 
     //proyectos
     Route::get('/proyectos', 'ProyectoController@index');

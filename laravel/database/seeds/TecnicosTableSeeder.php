@@ -18,7 +18,8 @@ class TecnicosTableSeeder extends Seeder
             'name'=> 'Rocio',
             'email'=> 'tecnico@tecnico.com',
             'password'=> bcrypt('87654321'),
-            'role' => "Tecnico"
+            'role' => "Tecnico",
+            "image"=> ''
 
         ]);
     }

@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use  App;
 
@@ -68,8 +70,9 @@ class UserController extends Controller
         $user->delete();
         return back()->with('notification','usuario eliminado');
 
-        
+
 
     }
+  
 
 }

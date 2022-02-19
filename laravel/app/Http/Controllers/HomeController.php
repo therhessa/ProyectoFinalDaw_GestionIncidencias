@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Auth;
 use App;
 
 class HomeController extends Controller
@@ -23,6 +26,53 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
+    public function config(){
+        $user = Auth::user();
+    	$id = $user->id;
+        return view('user.config',array('user'=>App\User::find($id)));
+
+
+
+    }
+
+
+
+    public function update(Request $request){
+		$user = Auth::user();
+    	$id = $user->id;
+        // $request->validate( [
+        //     'name' => ['required|string|max:255'],
+        //     'email' =>['required|string|email|max:255|unique:users,email,'.$id]
+
+        // ]);
+
+    	$name = $request->input('name');
+    	$email = $request->input('email');
+    	$user->name = $name;
+    	$user->email = $email;
+
+    	// Subir la imagen
+    	$image_path = $request->file('image_path');
+    	if($image_path){
+    		// Asignar nombre unico con el timestamp actual como prefijo
+    		$image_path_name = time() . $image_path->getClientOriginalName();
+    		// Guardar en la carpeta (storage/app/user)
+    		Storage::disk('users')->put($image_path_name, File::get($image_path));
+    		// Seteo el nombre de la imagen en el objeto
+    		$user->image = $image_path_name;
+    	}
+
+    	$user->update();
+
+
+    	return redirect()->route('config')
+    					 ->with(['message' => 'Usuario actualizado correctamente']) ;
+    }
+    public function getImage($filename){
+    	$file = Storage::disk('users')->get($filename);
+    	return  response($file, 200);
+    }
     public function index()
     {
         $user = auth()->user();
@@ -66,5 +116,6 @@ class HomeController extends Controller
         return back();
 
     }
+
 
 }

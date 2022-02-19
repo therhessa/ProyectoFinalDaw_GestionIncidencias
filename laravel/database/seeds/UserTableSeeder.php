@@ -17,10 +17,11 @@ class UserTableSeeder extends Seeder
             'name'=> 'tere',
             'email'=> 'admin@admin.com',
             'password'=> bcrypt('12345678'),
-            'role' => "Admin"
+            'role' => "Admin",
+            "image"=> ''
 
         ]);
-        
+
         User::create ([
             'name'=> 'Maria',
             'email'=> 'tecnic2@tecnico.com',
