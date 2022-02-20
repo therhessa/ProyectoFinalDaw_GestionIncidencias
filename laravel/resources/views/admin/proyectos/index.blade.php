@@ -20,8 +20,12 @@
                 </ul>
             </div>
         @endif
+        <div id="app">
+            <proyecto-component></proyecto-component>
 
-        <form action="" method="POST">
+        </div>
+
+        {{-- <form action="" method="POST">
             {{ csrf_field() }}
 
             <div class="form-group">
@@ -39,7 +43,7 @@
             <div class="form-group">
                 <button class="btn btn-primary">Registrar proyecto</button>
             </div>
-        </form>
+        </form> --}}
 
         <table class="table table-bordered">
             <thead>

@@ -19,8 +19,9 @@
                 </ul>
             </div>
         @endif
+      
 
-        <form action="" method="POST">
+         <form action="" method="POST">
             {{ csrf_field() }}
 
             <div class="form-group">
@@ -38,7 +39,7 @@
             <div class="form-group">
                 <button class="btn btn-primary">Guardar proyecto</button>
             </div>
-        </form>
+        </form> 
         <div class="row">
             <div class="col-md-6">
                 <p>Categorías</p>
