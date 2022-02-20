@@ -22,6 +22,8 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('lista-component', require('./components/ListaComponent.vue').default);
 Vue.component('proyecto-component', require('./components/ProyectoComponent.vue').default);
+Vue.component('footer-component', require('./components/FooterComponent.vue').default);
+
 
 
 /**
