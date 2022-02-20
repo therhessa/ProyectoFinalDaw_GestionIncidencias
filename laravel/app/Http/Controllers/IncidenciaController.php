@@ -13,6 +13,10 @@ class IncidenciaController extends Controller
     {
         $this->middleware('auth');
     }
+    public function listincident(){
+        $incidencias = App\Incidencia::all();
+        return view('incidencias.list')->with(compact('incidencias'));
+        }
     public function show($id){
         $incidencia = App\Incidencia::findOrFail($id);
         $mensajes = $incidencia->messages;

@@ -25,6 +25,7 @@ Route::get('/user/avatar/{filename}', 'HomeController@getImage')->name('user.ava
 //incidencias
 Route::get('/registrar','IncidenciaController@create');
 Route::post('/registrar','IncidenciaController@store');
+Route::get('/listaincidencias','IncidenciaController@listincident');
 Route::get('/ver/{id}','IncidenciaController@show');
 Route::get('/incidencia/{id}/atender', 'IncidenciaController@attend');
 Route::get('/incidencia/{id}/resolver', 'IncidenciaController@solve');

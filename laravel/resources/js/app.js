@@ -23,6 +23,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('lista-component', require('./components/ListaComponent.vue').default);
 Vue.component('proyecto-component', require('./components/ProyectoComponent.vue').default);
 Vue.component('footer-component', require('./components/FooterComponent.vue').default);
+Vue.component('listaadmin-component', require('./components/ListaadmiComponent.vue').default);
 
 
 

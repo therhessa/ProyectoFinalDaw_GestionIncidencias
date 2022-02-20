@@ -39,7 +39,7 @@
             <tbody>
                 <tr>
                     <td id="incidencia_responsible">{{ $incidencia->tecnico_name }}</td>
-                    <td>{{ $incidencia->soporte->name }}</td>
+                    <td id="incidencia_soporte"> {{ $incidencia->soporte->name }}</td>
                     <td id="incidencia_state">{{ $incidencia->state }}</td>
                     <td id="incidencia_severity">{{ $incidencia->severity_full }}</td>
                 </tr>
