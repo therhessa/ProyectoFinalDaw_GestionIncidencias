@@ -38,7 +38,7 @@
     <!-- Section: Social media -->
 
 
-    <!-- Section: Form -->
+
 
     <!-- Section: Text -->
     <section class="mb-4">
