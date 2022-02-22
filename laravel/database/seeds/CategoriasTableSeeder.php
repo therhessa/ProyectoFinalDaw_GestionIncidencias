@@ -13,27 +13,24 @@ class CategoriasTableSeeder extends Seeder
     {
         Categoria::create([
             'name' => 'Categoría A1',
-            
 			'proyecto_id' => 1
 
         ]);
         Categoria::create([
             'name' => 'Categoría A2',
-            
 			'proyecto_id' => 1
 
         ]);
         Categoria::create([
             'name' => 'Categoría B1',
-           
 			'proyecto_id' => 2
 
         ]);
         Categoria::create([
             'name' => 'Categoría B2',
-           
 			'proyecto_id' => 2
 
         ]);
+        
     }
 }

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="panel panel-primary">
-    <div class="panel-heading">Dashboard</div>
+
 
     <div class="panel-body">
         @if (count($errors) > 0)
@@ -17,7 +17,7 @@
 
         <form action="" method="POST">
             {{ csrf_field() }}
-            
+
             <div class="form-group">
                 <label for="categoria_id">Categoría</label>
                 <select name="categoria_id" class="form-control">

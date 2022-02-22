@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="panel panel-primary">
-    <div class="panel-heading">Usuarios</div>
+    <div class="panel-heading">Proyectos</div>
 
     <div class="panel-body">
         @if (session('notification'))

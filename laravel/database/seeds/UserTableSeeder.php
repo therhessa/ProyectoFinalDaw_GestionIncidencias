@@ -22,13 +22,7 @@ class UserTableSeeder extends Seeder
 
         ]);
 
-        User::create ([
-            'name'=> 'Maria',
-            'email'=> 'tecnic2@tecnico.com',
-            'password'=> bcrypt('55555555'),
-            'role' => "Tecnico"
 
-        ]);
          // Cliente
          User::create([
         	'name' => 'Juan',

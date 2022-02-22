@@ -19,7 +19,7 @@
                 </ul>
             </div>
         @endif
-      
+
 
          <form action="" method="POST">
             {{ csrf_field() }}
@@ -39,7 +39,7 @@
             <div class="form-group">
                 <button class="btn btn-primary">Guardar proyecto</button>
             </div>
-        </form> 
+        </form>
         <div class="row">
             <div class="col-md-6">
                 <p>Categorías</p>
@@ -99,10 +99,10 @@
                             <td>N{{ $key+1 }}</td>
                             <td>{{ $soporte->name }}</td>
                             <td>
-                                <button type="button" class="btn btn-sm btn-primary" title="Editar" data-soporte="{{ $soporte->id }}">
+                                <button type="button" class="btn btn-primary btn-lg" title="Editar" data-soporte="{{ $soporte->id }}">
                                     <span class="glyphicon glyphicon-pencil"></span>
                                 </button>
-                                <a href="/soporte/{{ $soporte->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
+                                <a href="/soporte/{{ $soporte->id }}/eliminar" class="btn btn-danger btn-lg" title="Dar de baja">
                                     <span class="glyphicon glyphicon-remove"></span>
                                 </a>
                             </td>

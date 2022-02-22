@@ -68,14 +68,14 @@
 					</thead>
 					<tbody id="dashboard_pending_incidents">
 						@foreach ($incidenciasnoresueltas as $incidencia)
-                        
+
 							<tr>
 								<td>
 									<a href="/ver/{{ $incidencia->id }}">
 										{{$incidencia->id }}
 									</a>
 								</td>
-                             
+
 								<td>{{ $incidencia->categoria_name }}</td>
 								<td>{{$incidencia->severity_full }}</td>
 								<td>{{ $incidencia->state }}</td>
@@ -97,7 +97,7 @@
 
 		<div class="panel panel-success">
 			<div class="panel-heading">
-				<h3 class="panel-title">Incidencias reportadas por mí</h3>
+				<h3 class="panel-title">Incidencias creadas por mí</h3>
 			</div>
 			<div class="panel-body">
 				<table class="table table-bordered">

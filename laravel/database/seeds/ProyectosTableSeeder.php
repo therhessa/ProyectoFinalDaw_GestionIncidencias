@@ -22,5 +22,10 @@ class ProyectosTableSeeder extends Seeder
             'description'=> 'proyecto ayuntamiento'
 
         ]);
+        Proyecto::create([
+            'name'=> 'Tercer proyecto',
+            'description'=> 'proyecto web'
+
+        ]);
     }
 }

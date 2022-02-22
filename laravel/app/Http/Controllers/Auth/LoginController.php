@@ -46,7 +46,7 @@ class LoginController extends Controller
 
          if(! $user->seleccionar_proyecto_id)
          {
-             if (auth()->user()-> role=="Admin" ||auth() ->user()-> role=="Cliente"  ) {
+             if (auth()->user()-> role=="Admin" ||auth()->user()-> role=="Cliente"  ) {
                  $user->seleccionar_proyecto_id = App\Proyecto::first()->id;
                
                 }

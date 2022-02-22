@@ -6,7 +6,7 @@
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Dashboard
+                    <p class="fw-bold">Registrar incidencia</p>
                 </div>
                 <div class="panel-body">
                     @if(count($errors)> 0)
@@ -14,7 +14,7 @@
                         <ul>
                             @foreach ($errors ->all() as $error )
                             <li> {{ $error}}</li>
-                                
+
                             @endforeach
                         </ul>
 
@@ -44,7 +44,9 @@
                         </div>
                         <div class="form-group">
                             <label for="title"> Titulo</label>
-                            <input type="text" name="title" class="form-contol">
+                            <input type="text" name="title"class="form-control form-control-lg">
+
+
                         </div>
                         <div class="form-group">
                             <label for="description"> Descripcion</label>

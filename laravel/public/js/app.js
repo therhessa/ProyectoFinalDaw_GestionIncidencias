@@ -2099,40 +2099,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -38021,51 +37987,10 @@ var staticRenderFns = [
           ),
         ]),
         _vm._v(" "),
-        _c("section", {}, [
-          _c("form", { attrs: { action: "" } }, [
-            _c("div", { staticClass: "row d-flex justify-content-center" }, [
-              _c("div", { staticClass: "col-auto" }, [
-                _c("p", { staticClass: "pt-2" }, [
-                  _c("strong", [_vm._v("Sign up for our newsletter")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-md-5 col-12" }, [
-                _c("div", { staticClass: "form-outline form-white mb-4" }, [
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "email", id: "form5Example21" },
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "label",
-                    {
-                      staticClass: "form-label",
-                      attrs: { for: "form5Example21" },
-                    },
-                    [_vm._v("Email address")]
-                  ),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-auto" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-outline-light mb-4",
-                    attrs: { type: "submit" },
-                  },
-                  [_vm._v("\r\n              Subscribe\r\n            ")]
-                ),
-              ]),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
         _c("section", { staticClass: "mb-4" }, [
           _c("p", [
             _vm._v(
-              "\r\n        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum\r\n        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam\r\n        eum harum corrupti dicta, aliquam sequi voluptate quas.\r\n      "
+              "\n        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum\n        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam\n        eum harum corrupti dicta, aliquam sequi voluptate quas.\n      "
             ),
           ]),
         ]),
@@ -38234,7 +38159,7 @@ var staticRenderFns = [
           staticStyle: { "background-color": "rgba(0, 0, 0, 0.2)" },
         },
         [
-          _vm._v("\r\n    © 2022 Copyright:\r\n    "),
+          _vm._v("\n    © 2022 Copyright:\n    "),
           _c(
             "a",
             {
