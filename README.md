@@ -2,7 +2,7 @@
 Proyecto Final Fp DAW
 Sistema de gestión de incidencias en laravel
 ### Pre-requisitos 📋
-_Tener instalado doocker_
+_docker_
 
 ## Despliegue 📦
 
