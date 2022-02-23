@@ -48,10 +48,10 @@ class LoginController extends Controller
          {
              if (auth()->user()-> role=="Admin" ||auth()->user()-> role=="Cliente"  ) {
                  $user->seleccionar_proyecto_id = App\Proyecto::first()->id;
-               
+
                 }
-              
-              
+
+
                  else
                 {  // si el usuario de soporte no está asociado a ningún proyecto?
                $primer_proyecto = $user->proyectos->first();

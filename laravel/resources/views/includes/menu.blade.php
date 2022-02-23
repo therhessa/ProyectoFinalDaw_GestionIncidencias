@@ -10,12 +10,12 @@
                 <a href="/listaincidencias" class="list-group-item list-group-item-action">Incidencias</a>
                 <a href="/registrar" class="list-group-item list-group-item-action">Informar incidencias</a>
                 @if(@auth() ->user()-> role=="Admin")
-				
-                    <div id="app">
+
+                     <div id="app">
                         <listaadmin-component></listaadmin-component>
 
 
-                    </div>
+                    </div> -
 					{{-- <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 						Administración <span class="caret"></span>
 					</a>
@@ -24,11 +24,12 @@
 						<li><a href="/proyectos">Proyectos</a></li>
 
 					</ul> --}}
-				
+
                 @endif
 
             @else
             <lista-component></lista-component>
+
                 {{-- <a href="#" class="list-group-item list-group-item-action">Bienvenido</a>
                 <a href="#" class="list-group-item list-group-item-action">instrucciones</a>
                 <a href="#" class="list-group-item list-group-item-action">informacion</a> --}}

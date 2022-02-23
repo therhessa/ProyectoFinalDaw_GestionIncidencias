@@ -3,13 +3,15 @@
 @section('content')
 
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header bg-info">{{ __('Login') }}</div>
 
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid">
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
+
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
@@ -65,7 +67,7 @@
                     </form>
                 </div>
             </div>
-        
-    
+
+
 
 @endsection
