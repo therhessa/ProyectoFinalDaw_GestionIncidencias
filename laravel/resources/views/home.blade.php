@@ -37,7 +37,7 @@
                                 <td>
 									<a href="/ver/{{ $incidencia->id }}"
 										{{ $incidencia->id }} class="btn btn-primary btn-sm">
-										Atender
+										Ver
 									</a>
 								</td>
 
@@ -84,7 +84,7 @@
 								<td>
 									<a href="/ver/{{ $incidencia->id }}"
 										{{ $incidencia->id }} class="btn btn-primary btn-sm">
-										Atender
+										ver
 									</a>
 								</td>
 							</tr>
@@ -118,7 +118,8 @@
 							<tr>
 								<td>
 									<a href="/ver/{{ $incidencia->id }}">
-										{{ $incidencia->id }}
+										{{ $incidencia->id }} 
+                                        
 									</a>
 								</td>
 								<td>{{$incidencia->categoria_name  }}</td>

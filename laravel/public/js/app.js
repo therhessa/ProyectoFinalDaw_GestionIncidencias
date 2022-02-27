@@ -1922,6 +1922,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -37897,7 +37898,7 @@ var staticRenderFns = [
         ]),
       ]),
       _vm._v(" "),
-      _c("img", { attrs: { src: "https://picsum.photos/id/180/900/350" } }),
+      _c("img", { attrs: { src: "/storage/images/portada.jpg" } }),
     ])
   },
 ]

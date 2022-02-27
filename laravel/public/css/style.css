@@ -116,9 +116,23 @@
       text-shadow: 2px 2px #eee;
 
   }
-  .titulo{
-    font-family: 'Shizuru', cursive;
+  .style{
+
+
+    border: 5px solid orange;
+    padding: 10px;
+    border-radius: 30px 20px;
 
   }
+  .titulo{
+    font-family: 'Shizuru', cursive;
+    font-size: 18px;
+
+
+
+  }
+  
+ 
+
 
 

@@ -56,10 +56,7 @@
                     <th>Descripción</th>
                     <td id="incidencia_description">{{ $incidencia->description }}</td>
                 </tr>
-                <tr>
-                    <th>Adjuntos</th>
-                    <td id="incidencia_attachment">No se han adjuntado archivos</td>
-                </tr>
+                
             </tbody>
         </table>
 
