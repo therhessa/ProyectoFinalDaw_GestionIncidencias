@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+
 <div class="panel panel-primary">
     <table class="table table-bordered">
         <thead>
@@ -41,5 +43,5 @@
         </tbody>
     </table>
     
-</div>
+</div> 
 @endsection

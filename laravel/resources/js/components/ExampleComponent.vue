@@ -4,7 +4,8 @@
     <div class="card-body">
         <h5 class="card-title">Sistema Gestión Incidencias</h5>
     </div>
-    <img src="https://picsum.photos/id/180/900/350" >
+    <!-- <img src="https://picsum.photos/id/180/900/350" > -->
+     <img src="/storage/images/portada.png" >
 </div>
 
 

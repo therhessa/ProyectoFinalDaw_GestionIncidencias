@@ -65,13 +65,16 @@
                         @if ($proyecto->trashed())
                         <a href="/proyecto/{{ $proyecto->id }}/restaurar" class="btn btn-sm btn-success" title="Restaurar">
                             <span class="glyphicon glyphicon-repeat"></span>
+                            Restaurar
                         </a>
                         @else
                         <a href="/proyecto/{{ $proyecto->id }}" class="btn btn-sm btn-primary" title="Editar">
                             <span class="glyphicon glyphicon-pencil"></span>
+                            Editar
                         </a>
                         <a href="/proyecto/{{ $proyecto->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
                             <span class="glyphicon glyphicon-remove"></span>
+                            Dar de Baja
                         </a>
                         @endif
 

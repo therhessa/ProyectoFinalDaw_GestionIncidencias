@@ -4,7 +4,8 @@
 
             <div class="card">
                 <div class="card-header bg-info">{{ __('Register') }}</div>
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid">
+                <img src="/storage/images/login.png" >
+                
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">

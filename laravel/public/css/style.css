@@ -33,9 +33,7 @@
 	color: #444;
 }
 
-.pub-image .nickname {
-	color: gray;
-}
+
 
 .image-container {
 	max-height: 500px;
@@ -66,28 +64,7 @@
 	margin: 10px;
 }
 
-.likes {
-	float: left;
-	padding: 0 20px;
-}
 
-.likes img {
-	width: 20px;
-}
-
-.pub-image-detail .comments {
-	padding: 20px;
-}
-
-.number-likes {
-	color: gray;
-	font-size: 11px;
-}
-
-.profile-user {
-	height: 200px;
-	margin-bottom: 40px;
-}
 
 .profile-user .container-avatar {
 	width: 200px;
@@ -125,12 +102,6 @@
 	overflow: hidden;
 	width:100%;
 }
-.container{
-    background: url('http://i1280.photobucket.com/albums/a487/Ani_Mai/15_zps9qpuzjxq.png');
-    background-repeat:no-repeat;
-    background-size:cover;
-    margin: 15px 15px 15px 15px;
-  }
 
 
   /**Head form**/
@@ -145,22 +116,9 @@
       text-shadow: 2px 2px #eee;
 
   }
+  .titulo{
+    font-family: 'Shizuru', cursive;
 
-  /**body form**/
-  .barra{
-      background: #fff;
-      padding: 15px 0 15px 0;
-      font-family: 'Questrial', sans-serif;
   }
-  .form-control :focus{
-      border-color: #66afe9;
-      -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
-      -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
-      box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
-      box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
-  }
-  .btn{
-      color: #FFFFFF;
-      background-color: #9C27B0;
-      border-color: rgba(0,0,0,.075);
-  }
+
+

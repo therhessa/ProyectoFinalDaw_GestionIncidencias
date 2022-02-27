@@ -15,7 +15,7 @@
                         <listaadmin-component></listaadmin-component>
 
 
-                    </div> -
+                    </div> 
 					{{-- <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 						Administración <span class="caret"></span>
 					</a>

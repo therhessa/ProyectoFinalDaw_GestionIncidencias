@@ -94,8 +94,9 @@
 			</div>
 		</div>
 		@endif
+      
 
-		<div class="panel panel-success">
+		  <div class="panel panel-success">
 			<div class="panel-heading">
 				<h3 class="panel-title">Incidencias creadas por mí</h3>
 			</div>
@@ -134,7 +135,7 @@
 				</table>
 			</div>
 
-		</div>
+		</div> 
 
     </div>
 </div>

@@ -56,11 +56,13 @@
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->name }}</td>
                     <td>
-                        <a href="/usuario/{{ $user->id }}" class="btn btn-sm btn-primary" title="Editar">
-                            <span class="glyphicon glyphicon-pencil"></span>
+                        <a href="/usuario/{{ $user->id }}" class="btn btn-sm btn-primary" title="Editar" >
+                            {{-- <span class="glyphicon glyphicon-pencil"></span> --}}
+                            Editar
                         </a>
                         <a href="/usuario/{{ $user->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
-                            <span class="glyphicon glyphicon-remove"></span>
+                            {{-- <span class="glyphicon glyphicon-remove"></span> --}}
+                            Dar de baja
                         </a>
                     </td>
                 </tr>

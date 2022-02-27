@@ -4,10 +4,12 @@
 
             <div class="card">
                 <div class="card-header bg-info">{{ __('Login') }}</div>
+                <img src="/storage/images/login.png" >  
 
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid">
+
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
+
                         @csrf
 
                         <div class="form-group row">

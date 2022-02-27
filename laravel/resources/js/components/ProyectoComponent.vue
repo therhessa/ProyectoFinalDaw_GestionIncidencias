@@ -1,6 +1,6 @@
 <template>
   <div>
-       <form @submit.prevent="agregar"> 
+       <form @submit.prevent="agregar">
             <!-- {{ csrf_field() }} -->
 
             <div class="form-group">
@@ -16,13 +16,13 @@
                 <input type="date" v-model="proyecto.start" :min="min" :max="max" class="form-control" >
                 <!-- <p>Value: '{{  old('start', date ('y-m-sd')) }}'</p> -->
             </div>
-           
+
             <div class="form-group">
                 <button  class="btn btn-primary" type="submit">Registrar proyecto</button>
             </div>
-         </form>  
-    
-   
+         </form>
+
+
   </div>
 </template>
 
@@ -60,17 +60,17 @@ export default {
         return;
       }
       const proyectoNuevo = this.proyecto;
-      this.proyecto = {nombre: '', descripcion: ''};    
+      this.proyecto = {nombre: '', descripcion: ''};
       axios.post('/proyectos', proyectoNuevo)
         .then((res) =>{
           const proyectoServidor = res.data;
           this.proyectos.push(proyectoServidor);
         })
     },
-  
-  
- 
-   
+
+
+
+
   }
 }
 </script>
