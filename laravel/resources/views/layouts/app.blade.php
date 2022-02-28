@@ -52,7 +52,7 @@
                         @if(Auth()->check())
                         <form class="navbar-form">
                             <div class="form-group">
-                              <select  id="lista-proyectos" class="form-control ">
+                              <select  id="lista-proyectos" class="form-control bg-info ">
                                 @foreach (auth()->user()->lista_proyectos as $proyecto)
                                   <option value="{{ $proyecto->id }}" @if($proyecto->id==auth()->user()->seleccionar_proyecto_id) selected @endif>{{ $proyecto->name }}</option>
                                 @endforeach
