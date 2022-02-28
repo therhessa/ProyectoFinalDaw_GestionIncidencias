@@ -130,12 +130,12 @@
 								 <td>
 									{{ $incidencia->tecnico_id ? $incidencia->tecnico->name : 'Sin asignar' }}
 								</td>
-                                <td>
+                                {{-- <td>
 									<a href="/ver/{{ $incidencia->id }}"
 										{{ $incidencia->id }} class="btn btn-primary btn-sm">
 										Ver
 									</a>
-								</td>
+								</td>  --}}
 							</tr>
 						@endforeach
 					</tbody>
