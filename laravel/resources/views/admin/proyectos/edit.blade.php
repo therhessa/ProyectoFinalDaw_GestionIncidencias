@@ -65,9 +65,11 @@
                             <td>
                                 <button type="button" class="btn btn-sm btn-primary" title="Editar" data-categoria="{{ $categoria->id }}">
                                     <span class="glyphicon glyphicon-pencil"></span>
+                                    Editar
                                 </button>
                                 <a href="/categoria/{{ $categoria->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
                                     <span class="glyphicon glyphicon-remove"></span>
+                                    Dar de baja
                                 </a>
                             </td>
                         </tr>
@@ -99,11 +101,13 @@
                             <td>N{{ $key+1 }}</td>
                             <td>{{ $soporte->name }}</td>
                             <td>
-                                <button type="button" class="btn btn-primary btn-lg" title="Editar" data-soporte="{{ $soporte->id }}">
+                                <button type="button" class="btn btn-primary btn-sm" title="Editar" data-soporte="{{ $soporte->id }}">
                                     <span class="glyphicon glyphicon-pencil"></span>
+                                    Editar
                                 </button>
-                                <a href="/soporte/{{ $soporte->id }}/eliminar" class="btn btn-danger btn-lg" title="Dar de baja">
+                                <a href="/soporte/{{ $soporte->id }}/eliminar" class="btn btn-danger btn-sm" title="Dar de baja">
                                     <span class="glyphicon glyphicon-remove"></span>
+                                    Dar de baja
                                 </a>
                             </td>
                         </tr>
@@ -118,8 +122,8 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Editar categoría</h4>
+            <h4 class="modal-title">Editar categoria</h4>
+            {{-- <button type="button" class="close" data-dismiss="modal">X</button> --}}
         </div>
         <form action="/categoria/editar" method="POST">
             {{ csrf_field() }}
@@ -131,7 +135,7 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              {{-- <button type="button" class="btn btn-secondary cerrarModal" data-dismiss="modal">Cancelar</button> --}}
               <button type="submit" class="btn btn-primary">Guardar cambios</button>
             </div>
         </form>
@@ -143,20 +147,20 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Editar soporte</h4>
+            <h4 class="modal-title">Editar soporte</h4>
+            {{-- <button type="button" class="close" data-dismiss="modal">X</button> --}}
         </div>
-        <form action="/soporte/editar" method="POST">
+        <form action="/nivel/editar" method="POST">
             {{ csrf_field() }}
             <div class="modal-body">
               <input type="hidden" name="soporte_id" id="soporte_id" value="">
               <div class="form-group">
-                  <label for="name">Nombre del nivel</label>
+                  <label for="name">Nombre del soporte</label>
                   <input type="text" class="form-control" name="name" id="soporte_name" value="">
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+              {{-- <button type="button" class="btn btn-secondary cerrarModal" data-dismiss="modal">Cancelar</button> --}}
               <button type="submit" class="btn btn-primary">Guardar cambios</button>
             </div>
         </form>
@@ -166,5 +170,5 @@
 @endsection
 
 @section('scripts')
-    <script src="/js/admin/proyectos/edit.js"></script>
+<script src="/js/admin/proyectos/edit.js"></script>
 @endsection

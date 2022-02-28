@@ -30,7 +30,7 @@ class IncidenciaController extends Controller
     }
     public function store(Request $request){
             $this->validate($request, [
-            'categoria_id' => 'sometimes|exists:categories,id',
+            'categoria_id' => 'sometimes|exists:categorias,id',
             'severity' => 'required|in:M,N,A',
             'title' => 'required|string|max:255',
             'description' => 'required|string|max:255'
@@ -53,7 +53,7 @@ class IncidenciaController extends Controller
         return back();
 
     }
-   
+
 
     public function attend($id)
     {
@@ -64,14 +64,14 @@ class IncidenciaController extends Controller
 
         $incidencia = App\Incidencia::findOrFail($id);
 
-        // There is a relationship between user and project?
+
         $proyecto_user = App\ProyectoUser::where('proyecto_id', $incidencia->proyecto_id)
                                         ->where('user_id', $user->id)->first();
 
         if (! $proyecto_user)
             return back();
 
-        // soporte is the same?
+
         if ($proyecto_user->soporte_id != $incidencia->soporte_id)
             return back();
 
@@ -85,7 +85,7 @@ class IncidenciaController extends Controller
     {
         $incidencia = App\Incidencia::findOrFail($id);
 
-        // Is the user authenticated the author of the incident?
+
         if ($incidencia->cliente_id != auth()->user()->id)
             return back();
 
@@ -99,7 +99,7 @@ class IncidenciaController extends Controller
     {
         $incidencia = App\Incidencia::findOrFail($id);
 
-        // Is the user authenticated the author of the incident?
+      
         if ($incidencia->cliente_id != auth()->user()->id)
             return back();
 

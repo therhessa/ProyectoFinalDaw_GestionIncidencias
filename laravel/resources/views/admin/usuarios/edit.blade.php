@@ -49,7 +49,7 @@
                         <option value="">Seleccione proyecto</option>
                          @foreach ($proyectos as $proyecto)
                             <option value="{{ $proyecto->id }}">{{ $proyecto->name }}</option>
-                        @endforeach 
+                        @endforeach
                     </select>
                 </div>
                 <div class="col-md-4">
@@ -67,7 +67,7 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>Proyecto</th>
+                    <th>Proyecto   </th>
                     <th>Soporte</th>
                     <th>Opciones</th>
                 </tr>
@@ -80,6 +80,7 @@
                     <td>
                         <a href="/proyecto-usuario/{{ $proyecto_user->id }}/eliminar" class="btn btn-sm btn-danger" title="Dar de baja">
                             <span class="glyphicon glyphicon-remove"></span>
+                            Dar de baja
                         </a>
                     </td>
                 </tr>

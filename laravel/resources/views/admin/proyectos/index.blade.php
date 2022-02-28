@@ -48,7 +48,7 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th> Nombre Proyecto</th>
+                    <th>Nombre Proyecto</th>
                     <th>Descripcion</th>
                     <th>Fecha inicio</th>
                     <th>Opciones</th>

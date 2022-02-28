@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Incidencia extends Model
 
 {
+    protected $appends = ['state'];
     //una incidencia pertenece a una categoria
     public function categoria(){
 
@@ -42,7 +43,7 @@ class Incidencia extends Model
 
     		case 'N':
     			return 'Normal';
-    		
+
     		default:
     			return 'Alta';
     	}

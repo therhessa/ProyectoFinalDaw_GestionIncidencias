@@ -44,8 +44,8 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>Proyecto</th>
-                    <th>soporte</th>
+                    <th>Proyecto asignado a </th>
+                    <th>Técnico de soporte</th>
                     <th>Opciones</th>
                 </tr>
             </thead>

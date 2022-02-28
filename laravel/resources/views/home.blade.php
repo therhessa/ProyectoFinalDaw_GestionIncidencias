@@ -1,17 +1,17 @@
 @extends('layouts.app')
 @section('content')
 <div class="panel panel-primary">
-    <div class="panel-heading">Dashboard</div>
+
 
     <div class="panel-body">
           @if (auth() ->user()-> role=="Tecnico")
         <div class="panel panel-success">
 			<div class="panel-heading">
-				<h3 class="panel-title">Incidencias asignadas a mí</h3>
+				<h3 class="panel-title ">Incidencias asignadas a mí</h3>
 			</div>
-			<div class="panel-body">
-				<table class="table table-bordered">
-					<thead>
+			<div class="panel-body ">
+				<table class="table table-bordered table-responsive-sm">
+					<thead class="table-info">
 						<tr>
 							<th>Código</th>
 							<th>Categoría</th>
@@ -54,8 +54,8 @@
 				<h3 class="panel-title">Incidencias sin asignar</h3>
 			</div>
 			<div class="panel-body">
-				<table class="table table-bordered">
-					<thead>
+				<table class="table table-bordered table-responsive-sm">
+					<thead class="table-info">
 						<tr>
 							<th>Código</th>
 							<th>Categoría</th>
@@ -94,15 +94,15 @@
 			</div>
 		</div>
 		@endif
-      
+
 
 		  <div class="panel panel-success">
 			<div class="panel-heading">
 				<h3 class="panel-title">Incidencias creadas por mí</h3>
 			</div>
 			<div class="panel-body">
-				<table class="table table-bordered">
-					<thead>
+				<table class="table table-bordered table-responsive-sm">
+					<thead class="table-info">
 						<tr>
 							<th>Código</th>
 							<th>Categoría</th>
@@ -118,8 +118,8 @@
 							<tr>
 								<td>
 									<a href="/ver/{{ $incidencia->id }}">
-										{{ $incidencia->id }} 
-                                        
+										{{ $incidencia->id }}
+
 									</a>
 								</td>
 								<td>{{$incidencia->categoria_name  }}</td>
@@ -142,7 +142,7 @@
 				</table>
 			</div>
 
-		</div> 
+		</div>
 
     </div>
 </div>

@@ -24,12 +24,11 @@
                     <form action="" method="POST">
                         {{ csrf_field() }}
                         <div class="form-group">
-                            <label for="category_id"> Categoria</label>
-                            <select name="category_id" class="form-control">
+                            <label for="categoria_id"> Categoria</label>
+                            <select name="categoria_id" class="form-control">
                                 <option value="">General</option>
                                 @foreach ($categorias as $categoria )
                                 <option value="{{ $categoria->id}}">{{$categoria->name }}</option>
-
                                 @endforeach
 
                             </select>

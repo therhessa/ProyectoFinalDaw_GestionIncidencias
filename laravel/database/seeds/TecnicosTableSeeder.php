@@ -23,7 +23,7 @@ class TecnicosTableSeeder extends Seeder
 
         ]);
         User::create ([
-            'name'=> 'MAria',
+            'name'=> 'Maria',
             'email'=> 'tecnico2@tecnico.com',
             'password'=> bcrypt('88888888'),
             'role' => "Tecnico",

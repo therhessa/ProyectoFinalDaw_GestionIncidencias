@@ -2045,61 +2045,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -37996,158 +37941,22 @@ var staticRenderFns = [
           ]),
         ]),
         _vm._v(" "),
-        _c("section", {}, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-3 col-md-6 mb-4 mb-md-0" }, [
-              _c("h5", { staticClass: "text-uppercase" }, [_vm._v("Links")]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "list-unstyled mb-0" }, [
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "text-white", attrs: { href: "#!" } },
-                    [_vm._v("Link 1")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "text-white", attrs: { href: "#!" } },
-                    [_vm._v("Link 2")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "text-white", attrs: { href: "#!" } },
-                    [_vm._v("Link 3")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "text-white", attrs: { href: "#!" } },
-                    [_vm._v("Link 4")]
-                  ),
-                ]),
-              ]),
+        _c("div", { staticClass: "col-lg-3 col-md-6 mb-4 mb-md-0" }, [
+          _c("ul", { staticClass: "list-unstyled mb-0" }, [
+            _c("li", [
+              _c("a", { staticClass: "text-white", attrs: { href: "#!" } }),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-lg-3 col-md-6 mb-4 mb-md-0" }, [
-              _c("h5", { staticClass: "text-uppercase" }, [_vm._v("Links")]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "list-unstyled mb-0" }, [
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "text-white", attrs: { href: "#!" } },
-                    [_vm._v("Link 1")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "text-white", attrs: { href: "#!" } },
-                    [_vm._v("Link 2")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "text-white", attrs: { href: "#!" } },
-                    [_vm._v("Link 3")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "text-white", attrs: { href: "#!" } },
-                    [_vm._v("Link 4")]
-                  ),
-                ]),
-              ]),
+            _c("li", [
+              _c("a", { staticClass: "text-white", attrs: { href: "#!" } }),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-lg-3 col-md-6 mb-4 mb-md-0" }, [
-              _c("h5", { staticClass: "text-uppercase" }, [_vm._v("Links")]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "list-unstyled mb-0" }, [
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "text-white", attrs: { href: "#!" } },
-                    [_vm._v("Link 1")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "text-white", attrs: { href: "#!" } },
-                    [_vm._v("Link 2")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "text-white", attrs: { href: "#!" } },
-                    [_vm._v("Link 3")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "text-white", attrs: { href: "#!" } },
-                    [_vm._v("Link 4")]
-                  ),
-                ]),
-              ]),
+            _c("li", [
+              _c("a", { staticClass: "text-white", attrs: { href: "#!" } }),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-lg-3 col-md-6 mb-4 mb-md-0" }, [
-              _c("h5", { staticClass: "text-uppercase" }, [_vm._v("Links")]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "list-unstyled mb-0" }, [
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "text-white", attrs: { href: "#!" } },
-                    [_vm._v("Link 1")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "text-white", attrs: { href: "#!" } },
-                    [_vm._v("Link 2")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "text-white", attrs: { href: "#!" } },
-                    [_vm._v("Link 3")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "text-white", attrs: { href: "#!" } },
-                    [_vm._v("Link 4")]
-                  ),
-                ]),
-              ]),
+            _c("li", [
+              _c("a", { staticClass: "text-white", attrs: { href: "#!" } }),
             ]),
           ]),
         ]),
@@ -38161,14 +37970,9 @@ var staticRenderFns = [
         },
         [
           _vm._v("\n    © 2022 Copyright:\n    "),
-          _c(
-            "a",
-            {
-              staticClass: "text-white",
-              attrs: { href: "https://mdbootstrap.com/" },
-            },
-            [_vm._v("MDBootstrap.com")]
-          ),
+          _c("a", { staticClass: "text-white" }, [
+            _vm._v("Sistema de gestión de incidencias"),
+          ]),
         ]
       ),
     ])
