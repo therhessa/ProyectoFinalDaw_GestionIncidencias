@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+@if (auth() ->user()-> role=="Admin" || auth() ->user()-> role=="Tecnico" )
 <div class="panel panel-primary">
     <table class="table table-bordered table-responsive-sm">
         <div class="panel-heading"> Listado de todas las incidencias</div>
@@ -49,4 +49,5 @@
     </table>
 
 </div>
+@endif
 @endsection
