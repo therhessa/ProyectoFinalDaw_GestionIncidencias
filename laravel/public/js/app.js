@@ -2011,40 +2011,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -37877,69 +37843,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("footer", { staticClass: "bg-info text-center text-white" }, [
       _c("div", { staticClass: "container p-4" }, [
-        _c("section", { staticClass: "mb-4" }, [
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-outline-light btn-floating m-1",
-              attrs: { href: "#!", role: "button" },
-            },
-            [_c("i", { staticClass: "fab fa-facebook-f" })]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-outline-light btn-floating m-1",
-              attrs: { href: "#!", role: "button" },
-            },
-            [_c("i", { staticClass: "fab fa-twitter" })]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-outline-light btn-floating m-1",
-              attrs: { href: "#!", role: "button" },
-            },
-            [_c("i", { staticClass: "fab fa-google" })]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-outline-light btn-floating m-1",
-              attrs: { href: "#!", role: "button" },
-            },
-            [_c("i", { staticClass: "fab fa-instagram" })]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-outline-light btn-floating m-1",
-              attrs: { href: "#!", role: "button" },
-            },
-            [_c("i", { staticClass: "fab fa-linkedin-in" })]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-outline-light btn-floating m-1",
-              attrs: { href: "#!", role: "button" },
-            },
-            [_c("i", { staticClass: "fab fa-github" })]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("section", { staticClass: "mb-4" }, [
-          _c("p", [
-            _vm._v(
-              "\n        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum\n        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam\n        eum harum corrupti dicta, aliquam sequi voluptate quas.\n      "
-            ),
-          ]),
-        ]),
+        _c("section", { staticClass: "mb-4" }, [_c("p")]),
         _vm._v(" "),
         _c("div", { staticClass: "col-lg-3 col-md-6 mb-4 mb-md-0" }, [
           _c("ul", { staticClass: "list-unstyled mb-0" }, [
@@ -38045,13 +37949,10 @@ var staticRenderFns = [
             [
               _c("div", { staticClass: "accordion-body" }, [
                 _c("strong", [
-                  _vm._v("This is the first item's accordion body."),
+                  _vm._v(
+                    " Le damos la bienvenida al sistema de gestión de incidencias"
+                  ),
                 ]),
-                _vm._v(
-                  " It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the "
-                ),
-                _c("code", [_vm._v(".accordion-body")]),
-                _vm._v(", though the transition does limit overflow.\n      "),
               ]),
             ]
           ),
@@ -38092,13 +37993,10 @@ var staticRenderFns = [
             [
               _c("div", { staticClass: "accordion-body" }, [
                 _c("strong", [
-                  _vm._v("This is the second item's accordion body."),
+                  _vm._v(
+                    " El usuario, se registrara en el sistema, y podrá acceder a su panel para poder informar de las incidencias "
+                  ),
                 ]),
-                _vm._v(
-                  " It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the "
-                ),
-                _c("code", [_vm._v(".accordion-body")]),
-                _vm._v(", though the transition does limit overflow.\n      "),
               ]),
             ]
           ),
@@ -38139,13 +38037,10 @@ var staticRenderFns = [
             [
               _c("div", { staticClass: "accordion-body" }, [
                 _c("strong", [
-                  _vm._v("This is the third item's accordion body."),
+                  _vm._v(
+                    "Nuestro objetivo es ofrecerle la mejor herramienta para administrar correctamente las incidencias generadas por sus clientes y usuarios basándonos en las buenas prácticas de ITIL."
+                  ),
                 ]),
-                _vm._v(
-                  " It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the "
-                ),
-                _c("code", [_vm._v(".accordion-body")]),
-                _vm._v(", though the transition does limit overflow.\n      "),
               ]),
             ]
           ),
