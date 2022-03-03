@@ -37986,7 +37986,7 @@ var render = function () {
                     }),
                   ]
                 ),
-                _vm._v(" New York,"),
+                _vm._v(" Cádiz,Av.Andalucia"),
               ]),
               _vm._v(" "),
               _c("p", [
