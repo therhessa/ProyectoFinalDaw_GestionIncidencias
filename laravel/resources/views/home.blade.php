@@ -54,7 +54,7 @@
 				<h3 class="panel-title">Incidencias sin asignar</h3>
 			</div>
 			<div class="panel-body">
-				<table class="table table-bordered table-responsive-sm">
+				<table class=" table table-bordered table-responsive-sm">
 					<thead class="table-info">
 						<tr>
 							<th>Código</th>
@@ -92,6 +92,8 @@
 					</tbody>
 				</table>
 			</div>
+         
+            
 		</div>
 		@endif
 
@@ -130,12 +132,12 @@
 								 <td>
 									{{ $incidencia->tecnico_id ? $incidencia->tecnico->name : 'Sin asignar' }}
 								</td>
-                                {{-- <td>
+                                  <td>
 									<a href="/ver/{{ $incidencia->id }}"
 										{{ $incidencia->id }} class="btn btn-primary btn-sm">
 										Ver
 									</a>
-								</td>  --}}
+								</td>   
 							</tr>
 						@endforeach
 					</tbody>
@@ -146,4 +148,5 @@
 
     </div>
 </div>
+
 @endsection

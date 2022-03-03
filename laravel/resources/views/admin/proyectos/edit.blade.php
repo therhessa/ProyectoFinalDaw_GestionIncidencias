@@ -87,7 +87,7 @@
                     </div>
                     <button class="btn btn-primary">Añadir</button>
                 </form>
-                <table class="table table-bordered">
+                <table class="table table-bordered table-responsive-sm">
                     <thead>
                         <tr>
                             <th>#</th>

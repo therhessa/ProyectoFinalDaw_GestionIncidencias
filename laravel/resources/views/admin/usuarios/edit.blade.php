@@ -64,7 +64,7 @@
         </form>
 
         <p>Proyectos asignados</p>
-        <table class="table table-bordered">
+        <table class="table table-bordered table-responsive-sm">
             <thead>
                 <tr>
                     <th>Proyecto   </th>

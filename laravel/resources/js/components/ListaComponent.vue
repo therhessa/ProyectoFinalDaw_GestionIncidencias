@@ -32,7 +32,7 @@
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>Nuestro objetivo es ofrecerle la mejor herramienta para administrar correctamente las incidencias generadas por sus clientes y usuarios basándonos en las buenas prácticas de ITIL.</strong>
+        <strong>Tecnologia creada con Laravel</strong>
       </div>
     </div>
   </div>
