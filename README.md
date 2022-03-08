@@ -3,11 +3,11 @@ Proyecto Final Fp DAW
 
 ## Comenzando 🚀
 Sistema de gestión de incidencias creado en el framework laravel
-
-
+ 
+### Pre-requisitos 📋
+_La tecnologia utilizada  para el despliegue es docker_
 ## Despliegue 📦
-_tecnologia para el despliegue_
-* docker
+
 _Comandos para desplegar la aplicacion_
 * docker-compose up
 _Entrar en el contenedor y realizar operaciones sobre el sistema_
