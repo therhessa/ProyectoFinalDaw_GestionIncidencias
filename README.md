@@ -16,7 +16,7 @@ _Entrar en el contenedor y realizar operaciones sobre el sistema_
 ## Base datos ⚙️
 * Servidor:db
 * usuario:admin
-*contraseña:laravel
+* contraseña:laravel
 
 ## Construido con 🛠️
 
