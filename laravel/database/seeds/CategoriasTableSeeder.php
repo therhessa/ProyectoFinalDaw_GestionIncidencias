@@ -12,25 +12,47 @@ class CategoriasTableSeeder extends Seeder
     public function run()
     {
         Categoria::create([
-            'name' => 'Categoría A1',
+            'name' => 'Programa malicioso',
 			'proyecto_id' => 1
 
         ]);
         Categoria::create([
-            'name' => 'Categoría A2',
+            'name' => 'Pérdida de información personal',
 			'proyecto_id' => 1
 
         ]);
         Categoria::create([
-            'name' => 'Categoría B1',
+            'name' => 'intrusión',
+			'proyecto_id' => 1
+
+        ]);
+        Categoria::create([
+            'name' => 'problema con el hardware',
+			'proyecto_id' => 1
+
+        ]);
+
+
+        Categoria::create([
+            'name' => 'Programa malicioso',
 			'proyecto_id' => 2
 
         ]);
         Categoria::create([
-            'name' => 'Categoría B2',
+            'name' => 'Pérdida de información personal',
 			'proyecto_id' => 2
 
         ]);
-        
+        Categoria::create([
+            'name' => 'intrusión',
+			'proyecto_id' => 2
+
+        ]);
+        Categoria::create([
+            'name' => 'problema con el hardware',
+			'proyecto_id' => 2
+
+        ]);
+
     }
 }

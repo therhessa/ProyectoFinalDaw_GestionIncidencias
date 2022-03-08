@@ -30,7 +30,7 @@
 
             <tr>
                 <th>Asignada a</th>
-                <th>Nivel</th>
+                <th>Tipo soporte</th>
                 <th>Estado</th>
                 <th>Severidad</th>
             </tr>

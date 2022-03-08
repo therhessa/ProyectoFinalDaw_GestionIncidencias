@@ -13,19 +13,15 @@ class ProyectosTableSeeder extends Seeder
     public function run()
     {
         Proyecto::create([
-            'name'=> 'Primer proyecto',
+            'name'=> 'Proyecto A',
             'description'=> 'proyecto jardineria'
 
         ]);
         Proyecto::create([
-            'name'=> 'Segundo proyecto',
+            'name'=> 'Proyecto B',
             'description'=> 'proyecto ayuntamiento'
 
         ]);
-        Proyecto::create([
-            'name'=> 'Tercer proyecto',
-            'description'=> 'proyecto web'
 
-        ]);
     }
 }

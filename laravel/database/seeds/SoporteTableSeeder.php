@@ -13,7 +13,7 @@ class SoporteTableSeeder extends Seeder
     public function run()
     {
         Soporte::create([
-        	'name' => 'Atención por teléfono',
+        	'name' => 'Soporte teléfonico',
         	'proyecto_id' => 1
     	]);
     	Soporte::create([
@@ -23,11 +23,11 @@ class SoporteTableSeeder extends Seeder
 
 
     	Soporte::create([
-        	'name' => 'Consulta especializada',
+        	'name' => 'Soporte teléfonico',
         	'proyecto_id' => 2
     	]);
         Soporte::create([
-        	'name' => 'Atención por teléfono',
+        	'name' => 'Envío de técnico',
         	'proyecto_id' => 2
     	]);
     }

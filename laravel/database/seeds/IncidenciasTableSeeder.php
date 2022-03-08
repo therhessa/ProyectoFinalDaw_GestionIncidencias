@@ -24,6 +24,18 @@ class IncidenciasTableSeeder extends Seeder
         	'cliente_id' => 2,
         	'tecnico_id' => 3
     	]);
-    
+        Incidencia::create([
+        	'title' => 'Segunda incidencia',
+        	'description' => 'Existe una pérdida de informacion personal',
+        	'severity' => 'A',
+
+        	'categoria_id' => 2,
+        	'proyecto_id' => 2,
+        	'soporte_id' => 1,
+
+        	'cliente_id' => 1,
+        	'tecnico_id' => 3
+    	]);
+
     }
 }
