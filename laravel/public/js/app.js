@@ -37954,7 +37954,7 @@ var render = function () {
               _c(
                 "h6",
                 { staticClass: "text-uppercase mb-4 font-weight-bold" },
-                [_vm._v("Contact")]
+                [_vm._v("Contacto")]
               ),
               _vm._v(" "),
               _c("p", [
@@ -38246,7 +38246,7 @@ var staticRenderFns = [
       { staticClass: "col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" },
       [
         _c("h6", { staticClass: "text-uppercase mb-4 font-weight-bold" }, [
-          _vm._v("Products"),
+          _vm._v("Productos"),
         ]),
         _vm._v(" "),
         _c("p", [_c("a", { attrs: { href: "#!" } }, [_vm._v("Sgi Tools")])]),
@@ -38268,20 +38268,22 @@ var staticRenderFns = [
       { staticClass: "col-md-3 col-lg-2 col-xl-2 mx-auto mt-3" },
       [
         _c("h6", { staticClass: "text-uppercase mb-4 font-weight-bold" }, [
-          _vm._v("Useful links"),
-        ]),
-        _vm._v(" "),
-        _c("p", [_c("a", { attrs: { href: "#!" } }, [_vm._v("Your Account")])]),
-        _vm._v(" "),
-        _c("p", [
-          _c("a", { attrs: { href: "#!" } }, [_vm._v("Legal warning")]),
+          _vm._v("Enlaces útiles"),
         ]),
         _vm._v(" "),
         _c("p", [
-          _c("a", { attrs: { href: "#!" } }, [_vm._v("Privacy Policy")]),
+          _c("a", { attrs: { href: "#!" } }, [_vm._v("Nuestra historia")]),
         ]),
         _vm._v(" "),
-        _c("p", [_c("a", { attrs: { href: "#!" } }, [_vm._v("Help")])]),
+        _c("p", [_c("a", { attrs: { href: "#!" } }, [_vm._v("Aviso Legal")])]),
+        _vm._v(" "),
+        _c("p", [
+          _c("a", { attrs: { href: "#!" } }, [
+            _vm._v("Politica de privacidad"),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("p", [_c("a", { attrs: { href: "#!" } }, [_vm._v("Ayuda")])]),
       ]
     )
   },

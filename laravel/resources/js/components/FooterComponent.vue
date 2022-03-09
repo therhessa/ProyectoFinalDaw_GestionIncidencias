@@ -24,7 +24,7 @@
 
       <!-- Grid column -->
       <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-        <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+        <h6 class="text-uppercase mb-4 font-weight-bold">Productos</h6>
         <p>
           <a href="#!">Sgi Tools</a>
         </p>
@@ -44,18 +44,18 @@
 
       <!-- Grid column -->
       <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-        <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+        <h6 class="text-uppercase mb-4 font-weight-bold">Enlaces útiles</h6>
         <p>
-          <a href="#!">Your Account</a>
+          <a href="#!">Nuestra historia</a>
         </p>
         <p>
-          <a href="#!">Legal warning</a>
+          <a href="#!">Aviso Legal</a>
         </p>
         <p>
-          <a href="#!">Privacy Policy</a>
+          <a href="#!">Politica de privacidad</a>
         </p>
         <p>
-          <a href="#!">Help</a>
+          <a href="#!">Ayuda</a>
         </p>
       </div>
 
@@ -64,7 +64,7 @@
 
       <!-- Grid column -->
       <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+        <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
         <p>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
