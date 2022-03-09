@@ -32,7 +32,7 @@ class ProyectoController extends Controller
     public function edit($id){
         $proyecto= App\Proyecto::find($id);
         $categorias = $proyecto->categorias;
-        $soportes = $proyecto->soportes; // Soporte::where('project_id', $id)->get();
+        $soportes = $proyecto->soportes;
         return view('admin.proyectos.edit')-> with(compact('proyecto','categorias','soportes'));
 
     }
@@ -52,13 +52,13 @@ class ProyectoController extends Controller
         App\Proyecto::find($id)->delete();
         return back()-> with('notification','el proyecto ha sido eliminado');
 
-        
+
     }
     public function restore($id){
         App\Proyecto::withTrashed()->find($id)->restore();
         return back()-> with('notification','el proyecto ha sido habilitado');
 
-        
+
     }
 
 }

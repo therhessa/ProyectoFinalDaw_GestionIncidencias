@@ -10,10 +10,7 @@ class ProyectoUserController extends Controller
 {
     public function store(Request $request)
     {
-    	// Elsoporte pertenezca al proyecto.
-    	// Asegurar que el proyecto exista.
-    	// Asegurar que el nivel exista.
-    	// Asegurar que el usuario exista.
+    
 
     	$proyecto_id = $request->input('proyecto_id');
     	$user_id = $request->input('user_id');
@@ -36,7 +33,7 @@ class ProyectoUserController extends Controller
     public function delete($id)
     {
     	App\ProyectoUser::find($id)->delete();
-       
+
 
     	return back();
     }
